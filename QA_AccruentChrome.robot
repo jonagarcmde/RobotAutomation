@@ -3,6 +3,7 @@ Library  Selenium2Library
 
 *** Variables ***
 #Login
+${Url}                         https://stage.expesite.com/login/
 ${User}                        devteam
 ${Password}                    Stagedevteam123*
 
@@ -15,7 +16,7 @@ ${LastNameBeginsWith}          Hill
 
 #Cost Tracking Budget Creation
 ${BudgetType}                  Standard Construction Budget
-${BudgetName}                  AutomatedMissingCostPayApps
+${BudgetName}                  2-Regression19.03
 
 #Cost Tracking Contract/Purchase Order Creation
 
@@ -27,11 +28,11 @@ ${ruta}                        C:\Users\SmokeTestImage.jpg
 *** Test Cases ***
 Log in Accruent
    [Teardown]                  Close Browser
-   Open Url In Chorme          https://stage.expesite.com/login/
+   Open Url In Chorme          ${Url}
    Input Test On Accruent
    #Access to the project
    #Validation Pay Apps
-   #Reports
+   Reports
    #Cost Tracking Budget Creation
    #Cost Tracking Bid Creation
    #Cost Tracking Contract/Purchase Order Creation
@@ -41,8 +42,8 @@ Log in Accruent
    #Loop
    #Apply Fix Misssing Cost
    #Sum
-   Cost Tracking - Vendor Access
-   Cost Tracking - Vendor Work Order Response
+   #Cost Tracking - Vendor Access
+   #Cost Tracking - Vendor Work Order Response
 
 
 
@@ -51,8 +52,8 @@ Log in Accruent
 *** Keywords ***
 
 Open Url In Chorme
-   [Arguments]                 ${url}
-   Open Browser                ${url}   Chrome
+   [Arguments]                 ${Url}
+   Open Browser                ${Url}   Chrome
    maximize browser window
    Wait Until Page Contains    Login
 
@@ -88,23 +89,46 @@ Reports
    Wait Until Page Contains                    My Reports
    Unselect Frame
    Select Frame                                id=bottom
-   Select from list by label                   name=ShowOnly                                Milestone Report
+   #Select from list by label                   name=ShowOnly                                Milestone Report
    Click Element                               link=BB&T Test
    Wait Until Page Contains                    AL - Alexander City, 2055 Cherokee Road [101098]
-   sleep                                       4
+   sleep                                       2
    Click Element                               id=gui_Export_to_Excel_middle
    Unselect Frame
    Select Window                               NEW
    Click Element                               id=gui_Continue_middle
-   Sleep                                       4
+   #Sleep                                       2
+   Select Frame                                id=excelupper
+   Click Element                               id=gui_Close_middle
+   Select Window                               MAIN
+   Select Frame                                id=bottom
    Click Element                               id=gui_Export_to_Excel_middle
+   Unselect Frame
+   Select Window                               NEW
+   Click Element                               name=ExcelExportAsCSV
+   Click Element                               id=gui_Continue_middle
+   Select Frame                                name=excelupper
+   Wait Until Page Contains                    The Excel Export of this Milestone Report is Complete.
+   #Sleep                                       2
+   Click Element                               id=gui_Close_middle
+   Select Window                               MAIN
+   Select Frame                                id=bottom
+   Click Element                               id=gui_Print_View_middle
+   Select Window                               NEW
+   Wait Until Page Does Not Contain            The Print View of this Milestone Report is being generated.
+   #Sleep                                       2
+   Select Window                               MAIN
+   Select Frame                                id=bottom
+   Click Element                               id=gui_Back_middle
+   Wait Until Page Contains                    My Reports
+   Select from list by label                   name=ShowOnly                                Data Export Report
+   Click Element                               link=Vendor PO Information
+   Select Window                               NEW
+   Select Frame                                id=excelupper
+   Wait Until Page Contains                    The Data Export Report is Complete.
+   Click Element                               id=gui_Close_middle
 
-   #Click Element                               id=gui_Print_View_middle
-   #Sleep                                       4
-   #Wait Until Page Does Not Contain            The Print View of this Milestone Report is being generated.
-   #Sleep                                       4
- #  Close Window
- #  Sleep
+
 
 
 
@@ -358,8 +382,8 @@ Apply Fix Misssing Cost
    select window                          NEW
    click element                          link=Fix payment application: Costs are not loading
    Click Element                          id=gui_Fix_pay_app_middle
-   ${PaymentID}=                          set variable                                                 746441
-   : FOR    ${INDEX}    IN RANGE       10
+   ${PaymentID}=                          set variable                                                 752407
+   : FOR    ${INDEX}    IN RANGE       9
     \   Input Text                              id=PayAppIDCheck                                      ${PaymentID}
     \   Click Element                           name=GO
     \   Sleep                                   2
