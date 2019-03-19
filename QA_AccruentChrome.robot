@@ -3,9 +3,9 @@ Library  Selenium2Library
 
 *** Variables ***
 #Login
-${Url}                         https://stage.expesite.com/login/
+${Url}                         http://exregression.accruentsystems.com:81/login/
 ${User}                        devteam
-${Password}                    Stagedevteam123*
+${Password}                    devteam123
 
 #Access to the project
 ${ProjectName}                 Karen's Test Project
@@ -16,23 +16,28 @@ ${LastNameBeginsWith}          Hill
 
 #Cost Tracking Budget Creation
 ${BudgetType}                  Standard Construction Budget
-${BudgetName}                  2-Regression19.03
+${BudgetName}                  5-Regression19.03
 
 #Cost Tracking Contract/Purchase Order Creation
 
 ${ruta}                        C:\Users\SmokeTestImage.jpg
 
 #${orig timeout}=               Set Selenium Timeout                                 10 seconds
+
+#MixPanel Credentials
+${UserMix}                        jonatan.garcia@contractors.accruent.com
+${PasswordMix}                    j0n474n.
+
 ###########################################################################################################################
 
 *** Test Cases ***
 Log in Accruent
    [Teardown]                  Close Browser
-   Open Url In Chorme          ${Url}
-   Input Test On Accruent
+   #Open Url In Chorme          ${Url}
+   #Input Test On Accruent
    #Access to the project
    #Validation Pay Apps
-   Reports
+   #Reports
    #Cost Tracking Budget Creation
    #Cost Tracking Bid Creation
    #Cost Tracking Contract/Purchase Order Creation
@@ -44,6 +49,7 @@ Log in Accruent
    #Sum
    #Cost Tracking - Vendor Access
    #Cost Tracking - Vendor Work Order Response
+   MixPanel Validation
 
 
 
@@ -382,7 +388,7 @@ Apply Fix Misssing Cost
    select window                          NEW
    click element                          link=Fix payment application: Costs are not loading
    Click Element                          id=gui_Fix_pay_app_middle
-   ${PaymentID}=                          set variable                                                 752407
+   ${PaymentID}=                          set variable                                                 752439
    : FOR    ${INDEX}    IN RANGE       9
     \   Input Text                              id=PayAppIDCheck                                      ${PaymentID}
     \   Click Element                           name=GO
@@ -428,3 +434,12 @@ Cost Tracking - Vendor Work Order Response
    input text                                id=subject                              Testing
    Click element                             id=gui_Save_middle
    Click element                             id=gui_Close_middle
+
+MixPanel Validation
+    Open Browser                             https://mixpanel.com/report/1152088/dashboard#id=31881               Chrome
+    Input Text                               id=id_email                                ${UserMix}
+    Input Text                               id=id_password                             ${PasswordMix}
+    Click Element                            xpath=//*[@id="bottom"]/input
+    Click Element                            xpath=//*[@id="wrapper"]/mp-chrome-header/div/div[1]/div/div[1]/a
+    Wait until page contains                 Mobile Key Metrics by Employer
+    Sleep                                    5
