@@ -20,9 +20,18 @@ ${BudgetName}                  5-Regression19.03
 
 #Cost Tracking Contract/Purchase Order Creation
 
-${ruta}                        C:\Users\SmokeTestImage.jpg
 
-#${orig timeout}=               Set Selenium Timeout                                 10 seconds
+#Documents __FileRoute  __FileName
+${FolderName}                 AutomationTest01
+${EFR}                        C:\\TestUpload\\SmokeTestExcel.xlsx
+${PFR}                        C:\\TestUpload\\SmokeTestPDF.pdf
+${IFR}                        C:\\TestUpload\\SmokeTestImage.jpg
+${EFN}                        SmokeTestExcel.xlsx
+${PFN}                        SmokeTestPDF.pdf
+${IFN}                        SmokeTestImage.jpg
+
+
+
 
 #MixPanel Credentials
 ${UserMix}                        jonatan.garcia@contractors.accruent.com
@@ -33,9 +42,9 @@ ${PasswordMix}                    j0n474n.
 *** Test Cases ***
 Log in Accruent
    [Teardown]                  Close Browser
-   #Open Url In Chorme          ${Url}
-   #Input Test On Accruent
-   #Access to the project
+   Open Url In Chorme          ${Url}
+   Input Test On Accruent
+   Access to the project
    #Validation Pay Apps
    #Reports
    #Cost Tracking Budget Creation
@@ -43,13 +52,15 @@ Log in Accruent
    #Cost Tracking Contract/Purchase Order Creation
    #Cost Tracking Work Order/Change Order Creation
    #Cost Tracking Payment App/Invoice Creation
-   #Documents
+   Documents
    #Loop
    #Apply Fix Misssing Cost
    #Sum
    #Cost Tracking - Vendor Access
    #Cost Tracking - Vendor Work Order Response
-   MixPanel Validation
+   #MixPanel Validation
+   #Conditionals
+
 
 
 
@@ -213,10 +224,21 @@ Cost Tracking Bid Creation
    Select Frame                                name=NewBiddersList
    Click Element                               id=gui_Add_middle
    Sleep                                       3
-   Unselect Frame
    Select Window                               MAIN
    Select Frame                                id=bottom
    Wait Until Page Contains                    Expesite - Expesite Support
+   Click Element                               id=gui_Add_Line_Items_middle
+   Unselect Frame
+#   Select Window                               NEW
+#   Wait Until Page Contains                     L = Labor Total
+#   Select Frame                                name=AddLineItemstoRFQ
+#   Click Element                               name=AllAll
+#   Sleep                                       4
+
+
+
+
+  # Click Element                               id=gui_Save_middle
 
 
  ##  ${handle} =                                Select Window                          NEW
@@ -351,36 +373,80 @@ Documents
    Select Frame                              id=top
    Click Element                             link=Documents
    Sleep                                     3
-   #Unselect Frame
-   #Select Frame                              id=bottom
-   #Select Frame                              name=dochead
-  # Click Element                             id=gui_New_Folder_middle
-  #Sleep                                     3
-  # Unselect Frame
-  # Select Frame                              id=bottom
-  # Select Frame                              name=content
-  # Input Text                                name=foldername                          008AutomatedFolder
-   #Click Element                             id=gui_Save_middle
-  # Sleep                                     5
-  # Unselect frame
-  # Select Frame                              id=top
-  # Click Element                             link=Documents
-   #Sleep                                     10
+   Unselect Frame
+   Select Frame                              id=bottom
+   Select Frame                              name=dochead
+   Click Element                             id=gui_New_Folder_middle
+   Sleep                                     3
+   Unselect Frame
+   Select Frame                              id=bottom
+   Select Frame                              name=content
+   Input Text                                name=foldername                          ${FolderName}
+   Click Element                             id=gui_Save_middle
+   Sleep                                     5
    Unselect frame
+   Select Frame                              id=top
+   Click Element                             link=Documents
+   Sleep                                     10
+   Unselect Frame
    Select Frame                              id=bottom
    Select Frame                              name=folders
    Select Frame                              name=folderbrowsemain
-   wait until page contains                  008AutomatedFolder (1)
-   click element                             link=008AutomatedFolder (1)
+   wait until page contains                  ${FolderName} (0)
+   click element                             link=${FolderName} (0)
    Unselect frame
    Select Frame                              id=bottom
    Select Frame                              name=dochead
    Click element                             id=gui_Upload_middle
    Unselect Frame
    Select Frame                              id=bottom
- #  Click Element                             id=Html5_ChooseFile_Button_Link
- #  sleep                                     5
- #  Choose File                               id=uploadBox_main                         ${ruta}
+   Choose File                               id=file1                                      ${EFR}
+   Choose File                               id=file1                                      ${PFR}
+   Choose File                               id=file1                                      ${IFR}
+   Click Element                             id=gui_Upload_middle
+   Wait Until Page Contains                  Success!
+   Click Element                             id=gui_Do_It_Now_middle
+   Click Element                             id=gui_Cancel_middle
+   Unselect Frame
+   Select Frame                              id=bottom
+   Select Frame                              name=content
+   Wait Until Page Contains                  ${EFN}
+   Wait Until Page Contains                  ${PFN}
+   Wait Until Page Contains                  ${IFN}
+   Sleep                                     3
+
+
+
+
+
+
+#   : FOR    ${INDEX}    IN RANGE       2
+#   \   ${x}=                                     Set Variable                                       ${INDEX}
+#   \   Run keyword if                            "${x}" == "2"
+#   \   ...                                       Choose File                                         id=file1               C:\\TestUpload\\Image001.jpg
+#   \   ...                                       ELSE
+#   \   ...                                       Choose File                                         id=file1               C:\\TestUpload\\SmokeTestImage.jpg
+#   Sleep                                         4
+
+#Conditionals
+#    ${x}=                                   Set Variable                                Simplex
+#    Run keyword if                          "${x}" == "Simple"
+#    ...                                     Log to console                              A
+#    ...                                     ELSE
+#    ...                                     Log to console                              B
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Apply Fix Misssing Cost
    Select Frame                           id=top
@@ -443,3 +509,11 @@ MixPanel Validation
     Click Element                            xpath=//*[@id="wrapper"]/mp-chrome-header/div/div[1]/div/div[1]/a
     Wait until page contains                 Mobile Key Metrics by Employer
     Sleep                                    5
+
+
+Conditionals
+    ${x}=                                   Set Variable                                Simplex
+    Run keyword if                          "${x}" == "Simple"
+    ...                                     Log to console                              A
+    ...                                     ELSE
+    ...                                     Log to console                              B
