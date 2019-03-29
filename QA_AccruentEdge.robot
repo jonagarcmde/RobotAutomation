@@ -3,8 +3,8 @@ Library  Selenium2Library
 
 *** Variables ***
 #Login
-${User}                        devteam
-${Password}
+${User}                        ####
+${Password}                    ####
 
 #Access to the project
 ${ProjectName}                 Karen's Test Project
@@ -28,12 +28,12 @@ Log in Accruent
    [Teardown]                  Close Browser
    Open Url In Chorme          https://stage.expesite.com/altlogin/default.asp
    Input Test On Accruent
-   Access to the project
-   #Validation Pay Apps
+   #Access to the project
+   Validation Pay Apps
    #Reports
    #Cost Tracking Budget Creation
    #Cost Tracking Bid Creation
-   Cost Tracking Contract/Purchase Order Creation
+   #Cost Tracking Contract/Purchase Order Creation
    #Cost Tracking Work Order/Change Order Creation
    #Documents
 
@@ -76,11 +76,55 @@ Access to the project
 
 Reports
    Select Frame                                id=top
-   click element                               link=My Reports
-   click element                               xpath=(.//*[normalize-space(text()) and normalize-space(.)='My Offline Surveys'])[1]/following::a[2]
+   Click element                               link=My Reports
+   Click element                               xpath=(.//*[normalize-space(text()) and normalize-space(.)='My Offline Surveys'])[1]/following::a[2]
    Wait Until Page Contains                    My Reports
+   Unselect Frame
+   Select Frame                                id=bottom
+   #Select from list by label                   name=ShowOnly                                Milestone Report
+   Click Element                               link=BB&T Test
+   Wait Until Page Contains                    AL - Alexander City, 2055 Cherokee Road [101098]
+   sleep                                       2
+   Click Element                               id=gui_Export_to_Excel_middle
+   Unselect Frame
+   Select Window                               NEW
+   Click Element                               id=gui_Continue_middle
+   Sleep                                       2
+   Select Frame                                id=excelupper
+   Click Element                               id=gui_Close_middle
+   Select Window                               MAIN
+   Select Frame                                id=bottom
+   Click Element                               id=gui_Export_to_Excel_middle
+   Unselect Frame
+   Select Window                               NEW
+   Click Element                               name=ExcelExportAsCSV
+   Click Element                               id=gui_Continue_middle
+   Select Frame                                name=excelupper
+   Wait Until Page Contains                    The Excel Export of this Milestone Report is Complete.
+   Sleep                                       2
+   Click Element                               id=gui_Close_middle
+   Select Window                               MAIN
+   Select Frame                                id=bottom
+   Click Element                               id=gui_Print_View_middle
+   Select Window                               NEW
+   Wait Until Page Does Not Contain            The Print View of this Milestone Report is being generated.
+   Sleep                                       2
+   Select Window                               MAIN
+   Select Frame                                id=bottom
+   Click Element                               id=gui_Back_middle
+   Wait Until Page Contains                    My Reports
+   Select from list by label                   name=ShowOnly                                Data Export Report
+   Click Element                               link=Vendor PO Information
+   Select Window                               NEW
+   Select Frame                                id=excelupper
+   Sleep                                       2
+   Wait Until Page Contains                    The Data Export Report is Complete.
+   Sleep                                       10
+   Click Element                               id=gui_Close_middle
+                  My Reports
 
 Validation Pay Apps
+   Sleep                                  5
    Select Frame                           id=top
    click element                          link=Admin
    select window                          NEW

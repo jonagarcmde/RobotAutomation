@@ -3,9 +3,9 @@ Library  Selenium2Library
 
 *** Variables ***
 #Login
-${Url}                         http://exregression.accruentsystems.com:81/login/
-${User}                        devteam
-${Password}                    devteam123
+${Url}                         https://stage.expesite.com/altlogin/default.asp
+${User}                        ####
+${Password}                    ####
 
 #Access to the project
 ${ProjectName}                 Karen's Test Project
@@ -16,19 +16,19 @@ ${LastNameBeginsWith}          Hill
 
 #Cost Tracking Budget Creation
 ${BudgetType}                  Standard Construction Budget
-${BudgetName}                  5-Regression19.03
+${BudgetName}                  AutomatedSmokeChrome-19.03-2
 
 #Cost Tracking Contract/Purchase Order Creation
 
 
-#Documents __FileRoute  __FileName
-${FolderName}                 AutomationTest01
-${EFR}                        C:\\TestUpload\\SmokeTestExcel.xlsx
-${PFR}                        C:\\TestUpload\\SmokeTestPDF.pdf
-${IFR}                        C:\\TestUpload\\SmokeTestImage.jpg
-${EFN}                        SmokeTestExcel.xlsx
-${PFN}                        SmokeTestPDF.pdf
-${IFN}                        SmokeTestImage.jpg
+#Documents
+${FolderName}                        ImagesStage19.03-2
+${ExcelRoute}                        C:\\TestUpload\\SmokeTestExcel.xlsx
+${PDFRoute}                          C:\\TestUpload\\SmokeTestPDF.pdf
+${ImageRoute}                        C:\\TestUpload\\SmokeTestImage.jpg
+${ExcelName}                         SmokeTestExcel.xlsx
+${PDFName}                           SmokeTestPDF.pdf
+${ImageName}                         SmokeTestImage.jpg
 
 
 
@@ -50,7 +50,7 @@ Log in Accruent
    #Cost Tracking Budget Creation
    #Cost Tracking Bid Creation
    #Cost Tracking Contract/Purchase Order Creation
-   #Cost Tracking Work Order/Change Order Creation
+   #Cost Tracking Work Order/Change Order Creation  PENDING !!!
    #Cost Tracking Payment App/Invoice Creation
    Documents
    #Loop
@@ -114,7 +114,7 @@ Reports
    Unselect Frame
    Select Window                               NEW
    Click Element                               id=gui_Continue_middle
-   #Sleep                                       2
+   Sleep                                       2
    Select Frame                                id=excelupper
    Click Element                               id=gui_Close_middle
    Select Window                               MAIN
@@ -126,14 +126,14 @@ Reports
    Click Element                               id=gui_Continue_middle
    Select Frame                                name=excelupper
    Wait Until Page Contains                    The Excel Export of this Milestone Report is Complete.
-   #Sleep                                       2
+   Sleep                                       2
    Click Element                               id=gui_Close_middle
    Select Window                               MAIN
    Select Frame                                id=bottom
    Click Element                               id=gui_Print_View_middle
    Select Window                               NEW
    Wait Until Page Does Not Contain            The Print View of this Milestone Report is being generated.
-   #Sleep                                       2
+   Sleep                                       2
    Select Window                               MAIN
    Select Frame                                id=bottom
    Click Element                               id=gui_Back_middle
@@ -142,7 +142,9 @@ Reports
    Click Element                               link=Vendor PO Information
    Select Window                               NEW
    Select Frame                                id=excelupper
+   Sleep                                       2
    Wait Until Page Contains                    The Data Export Report is Complete.
+   Sleep                                       10
    Click Element                               id=gui_Close_middle
 
 
@@ -309,13 +311,14 @@ Cost Tracking Work Order/Change Order Creation
    Select Frame                               id=bottom
    click element                              link=${BudgetName}
    click element                              link=Work Orders and Change Orders
-   click element                              id=gui_Create_New_Work_Order_middle
+   Sleep                                      2
+   click element                              id=gui_Create_New_Change_Order_middle
    unselect frame
    select window                              NEW
    select frame                               name=popmain
    sleep                                      4
-   select from list by label                  name=senderID                           Expesite Support
-   input text                                 id=subject                              WorkOrderStage19.02
+   select from list by label                  name=RecipientID                        Expesite Support
+   input text                                 name=subject                            WorkOrderStage19.03
    sleep                                      3
    click element                              id=gui_Save_middle
    click element                              id=gui_Close_middle
@@ -327,7 +330,7 @@ Cost Tracking Work Order/Change Order Creation
    select frame                               name=popmain
    sleep                                      5
    select from list by label                  name=RecipientID                        Expesite Support
-   input text                                 name=subject                            ChangeOrderStage19.02
+   input text                                 name=subject                            ChangeOrderStage19.03
    click element                              id=gui_Continue_middle
    click element                              id=gui_Close_middle
    unselect frame
@@ -400,9 +403,9 @@ Documents
    Click element                             id=gui_Upload_middle
    Unselect Frame
    Select Frame                              id=bottom
-   Choose File                               id=file1                                      ${EFR}
-   Choose File                               id=file1                                      ${PFR}
-   Choose File                               id=file1                                      ${IFR}
+   Choose File                               id=file1                                      ${ExcelRoute}
+   Choose File                               id=file1                                      ${PDFRoute}
+   Choose File                               id=file1                                      ${ImageRoute}
    Click Element                             id=gui_Upload_middle
    Wait Until Page Contains                  Success!
    Click Element                             id=gui_Do_It_Now_middle
@@ -410,10 +413,12 @@ Documents
    Unselect Frame
    Select Frame                              id=bottom
    Select Frame                              name=content
-   Wait Until Page Contains                  ${EFN}
-   Wait Until Page Contains                  ${PFN}
-   Wait Until Page Contains                  ${IFN}
+   Wait Until Page Contains                  ${ExcelName}
+   Wait Until Page Contains                  ${PDFName}
+   Wait Until Page Contains                  ${ImageName}
    Sleep                                     3
+
+
 
 
 

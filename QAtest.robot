@@ -3,8 +3,8 @@ Library  Selenium2Library
 
 *** Variables ***
 #Login
-${User}                        devteam
-${Password}
+${User}                        ####
+${Password}                    ####
 
 #Access to the project
 ${ProjectName}                 Karen's Test Project
