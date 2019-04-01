@@ -34,8 +34,8 @@ ${ImageName}                         SmokeTestImage.jpg
 
 
 #MixPanel Credentials
-${UserMix}                        jonatan.garcia@contractors.accruent.com
-${PasswordMix}                    j0n474n.
+${UserMix}                        jonatan.garcia###
+${PasswordMix}                    ####
 
 ###########################################################################################################################
 
@@ -58,7 +58,7 @@ Log in Accruent
    #Sum
    #Cost Tracking - Vendor Access
    #Cost Tracking - Vendor Work Order Response
-   #MixPanel Validation
+   MixPanel Validation
    #Conditionals
 
 

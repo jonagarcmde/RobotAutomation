@@ -3,14 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="befbbd01-68c0-4e6f-ba80-b400031ff6e2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QA_AccruentChrome.robot" beforeDir="false" afterPath="$PROJECT_DIR$/QA_AccruentChrome.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QA_AccruentEdge.robot" beforeDir="false" afterPath="$PROJECT_DIR$/QA_AccruentEdge.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QA_SmokeChromeProd.robot" beforeDir="false" afterPath="$PROJECT_DIR$/QA_SmokeChromeProd.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QAtest.robot" beforeDir="false" afterPath="$PROJECT_DIR$/QAtest.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/output.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1.robot" beforeDir="false" afterPath="$PROJECT_DIR$/test1.robot" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
