@@ -3,8 +3,9 @@ Library  Selenium2Library
 
 *** Variables ***
 #Login
-${User}                        ####
-${Password}                    ####
+${Url}                         https://stage.expesite.com/altlogin/default.asp
+${User}                        devteam
+${Password}                    Stagedevteam123*
 
 #Access to the project
 ${ProjectName}                 Karen's Test Project
@@ -15,11 +16,29 @@ ${LastNameBeginsWith}          Hill
 
 #Cost Tracking Budget Creation
 ${BudgetType}                  Standard Construction Budget
-${BudgetName}                  SmokeStage19.02E
+${BudgetName}                  Smoke19.04ED
 
 #Cost Tracking Contract/Purchase Order Creation
 
-${ruta}                        C:\Users\SmokeTestImage.jpg
+#Documents
+${FolderName}                        Testing Upload 19.04EDG
+${ExcelRoute}                        C:\\TestUpload\\SmokeTestExcel.xlsx
+${PDFRoute}                          C:\\TestUpload\\SmokeTestPDF.pdf
+${ImageRoute}                        C:\\TestUpload\\SmokeTestImage.jpg
+${Image2Route}                       C:\\TestUpload\\Testing;.PNG
+${Image3Route}                       C:\\TestUpload\\;Hola.png
+${Image4Route}                       C:\\TestUpload\\ex_qae.PNG
+${Image5Route}                       C:\\TestUpload\\ex_qae.PNG
+${Image6Route}                       C:\\TestUpload\\ho;la.png
+
+${ExcelName}                         SmokeTestExcel.xlsx
+${PDFName}                           SmokeTestPDF.pdf
+${ImageName}                         SmokeTestImage.jpg
+${Image2Name}                        Testing;.PNG
+${Image3Name}                        ;Hola.png
+${Image4Name}                        ex_qae.PNG
+${Image5Name}                        ex_qae.PNG
+${Image6Name}                        ho;la.png
 
 
 
@@ -28,8 +47,8 @@ Log in Accruent
    [Teardown]                  Close Browser
    Open Url In Chorme          https://stage.expesite.com/altlogin/default.asp
    Input Test On Accruent
-   #Access to the project
-   Validation Pay Apps
+   Access to the project
+   #Validation Pay Apps
    #Reports
    #Cost Tracking Budget Creation
    #Cost Tracking Bid Creation
@@ -47,44 +66,44 @@ Log in Accruent
 Open Url In Chorme
    [Arguments]                 ${url}
    Open Browser                ${url}   Edge
-   maximize browser window
+   Maximize Browser Window
    Wait Until Page Contains    Login
 
 
 Input Test On Accruent
-   Input Text                 id=username         ${User}
+#   Input Text                 id=username         ${User}
  # Clear Element Text         id=username
-   sleep                      1
-   Input Text                 name=password       ${Password}
-   sleep                      1
+   Sleep                      1
+#   Input Text                 name=password       ${Password}
+   Sleep                      1
    Click Button               //input[@id='image1']
-   sleep                      1
+   Sleep                      1
    Wait Until Page Contains   Expesite
-   sleep                      1
+   Sleep                      1
 
 Access to the project
    Sleep                                       4
    Select Frame                                id=bottom
    Sleep                                       4
-   select from list by label                   id=criteriatype          Projects
+   Select From List By Label                   id=criteriatype          Projects
    Sleep                                       4
-   input text                                  id=project_keywords      ${ProjectName}
-   sleep                                       2
+   Input Text                                  id=project_keywords      ${ProjectName}
+   Sleep                                       2
    Sleep                                       4
-   click element                               xpath=(.//*[normalize-space(text()) and normalize-space(.)='Search'])[1]/following::font[2]
-   unselect frame
+   Click Element                               xpath=(.//*[normalize-space(text()) and normalize-space(.)='Search'])[1]/following::font[2]
+   Unselect Frame
 
 Reports
    Select Frame                                id=top
-   Click element                               link=My Reports
-   Click element                               xpath=(.//*[normalize-space(text()) and normalize-space(.)='My Offline Surveys'])[1]/following::a[2]
+   Click Element                               link=My Reports
+   Click Element                               xpath=(.//*[normalize-space(text()) and normalize-space(.)='My Offline Surveys'])[1]/following::a[2]
    Wait Until Page Contains                    My Reports
    Unselect Frame
    Select Frame                                id=bottom
-   #Select from list by label                   name=ShowOnly                                Milestone Report
+   #Select From List By Label                   name=ShowOnly                                Milestone Report
    Click Element                               link=BB&T Test
    Wait Until Page Contains                    AL - Alexander City, 2055 Cherokee Road [101098]
-   sleep                                       2
+   Sleep                                       2
    Click Element                               id=gui_Export_to_Excel_middle
    Unselect Frame
    Select Window                               NEW
@@ -113,7 +132,7 @@ Reports
    Select Frame                                id=bottom
    Click Element                               id=gui_Back_middle
    Wait Until Page Contains                    My Reports
-   Select from list by label                   name=ShowOnly                                Data Export Report
+   Select From List By Label                   name=ShowOnly                                Data Export Report
    Click Element                               link=Vendor PO Information
    Select Window                               NEW
    Select Frame                                id=excelupper
@@ -126,49 +145,49 @@ Reports
 Validation Pay Apps
    Sleep                                  5
    Select Frame                           id=top
-   click element                          link=Admin
-   select window                          NEW
+   Click Element                          link=Admin
+   Select Window                          NEW
    Sleep                                  4
-   click element                          link=Assume Another User's Identity
-   sleep                                  5
-   input text                             name=LastNameBeginsWith             ${LastNameBeginsWith}
+   Click Element                          link=Assume Another User's Identity
+   Sleep                                  5
+   Input Text                             name=LastNameBeginsWith             ${LastNameBeginsWith}
    click button                           name=GO
    Sleep                                  4
-   click element                          link=Hill, Chad
-   sleep                                  5
-   select window                          NEW
-   sleep                                  5
+   Click Element                          link=Hill, Chad
+   Sleep                                  5
+   Select Window                          NEW
+   Sleep                                  5
    Select Frame                           id=top
-   click element                          link=My World
-   click element                          link=My Inbox
-   unselect frame
+   Click Element                          link=My World
+   Click Element                          link=My Inbox
+   Unselect Frame
  #  Select Frame                          id=bottom
- #  click element                         xpath=(.//*[normalize-space(text()) and normalize-space(.)='My Inbox'])[2]/following::u[1]
-    sleep                                 10
+ #  Click Element                         xpath=(.//*[normalize-space(text()) and normalize-space(.)='My Inbox'])[2]/following::u[1]
+    Sleep                                 10
     wait until element is not visible      error
 
 Cost Tracking Budget Creation
    Select Frame                               id=top
-   sleep                                      4
-   click element                              link=Budget
-   sleep                                      8
-   unselect frame
+   Sleep                                      4
+   Click Element                              link=Budget
+   Sleep                                      8
+   Unselect Frame
    Select Frame                               id=bottom
-   click element                              xpath=(.//*[normalize-space(text()) and normalize-space(.)='Back'])[1]/following::u[1]
-   unselect frame
+   Click Element                              xpath=(.//*[normalize-space(text()) and normalize-space(.)='Back'])[1]/following::u[1]
+   Unselect Frame
    Select Frame                               id=bottom
-   sleep                                      4
-   select from list by label                  name=Standard                       Standard Construction Budget
-   click element                              id=gui_Do_It_Now_middle_3
-   unselect frame
+   Sleep                                      4
+   Select From List By Label                  name=Standard                       Standard Construction Budget
+   Click Element                              id=gui_Do_It_Now_middle_3
+   Unselect Frame
    Select Frame                               id=bottom
-   sleep                                      4
-   input text                                 name=budgetname                      ${BudgetName}
-   click element                              id=gui_Save_middle
-   wait until page contains                   ${BudgetName}
-   sleep                                      4
-   click element                              link=${BudgetName}
-   sleep                                      3
+   Sleep                                      4
+   Input Text                                 name=budgetname                      ${BudgetName}
+   Click Element                              id=gui_Save_middle
+   Wait Until Page Contains                   ${BudgetName}
+   Sleep                                      4
+   Click Element                              link=${BudgetName}
+   Sleep                                      3
 
 
 
@@ -177,19 +196,19 @@ Cost Tracking Budget Creation
 Cost Tracking Bid Creation
    ${Numbers}=                                evaluate                              random.randint(100, 10000)     random
    Select Frame                               id=top
-   click element                              link=Budget
-   sleep                                      3
-   unselect frame
+   Click Element                              link=Budget
+   Sleep                                      3
+   Unselect Frame
    Select Frame                               id=bottom
-   click element                              link=${BudgetName}
-   click element                              link=Bid Package
-   select from list by label                  name=contracttype                     Standard
-   input text                                 name=txtname                          ${Numbers}
-   input text                                 name=txtDue                           12/31/2019
-   click element                              id=gui_Add_Bidders_middle
-   unselect frame
-   select window                               NEW
-   sleep                                       3
+   Click Element                              link=${BudgetName}
+   Click Element                              link=Bid Package
+   Select From List By Label                  name=contracttype                     Standard
+   Input Text                                 name=txtname                          ${Numbers}
+   Input Text                                 name=txtDue                           12/31/2019
+   Click Element                              id=gui_Add_Bidders_middle
+   Unselect Frame
+   Select Window                               NEW
+   Sleep                                       3
    Select Frame                                name=SearchBidder
    Input Text                                  name=name                              Expesite Support
    Click Element                               id=gui_Search_For_Bidder_middle
@@ -214,125 +233,183 @@ Cost Tracking Bid Creation
 
  ##  ${handle} =                                Select Window                          NEW
  ##  log to console                             ${handle}
- ##  sleep                                      2
- ##click element                              xpath=//*[@id="tdCBALL"]/input
- ##click element                              id=gui_Save_middle
+ ##  Sleep                                      2
+ ##Click Element                              xpath=//*[@id="tdCBALL"]/input
+ ##Click Element                              id=gui_Save_middle
 
 
 Cost Tracking Contract/Purchase Order Creation
    ${Numbers}=                                evaluate                              random.randint(100, 10000)     random
    Select Frame                               id=top
-   sleep                                      3
-   click element                              link=Budget
-   sleep                                      3
-   unselect frame
+   Sleep                                      3
+   Click Element                              link=Budget
+   Sleep                                      3
+   Unselect Frame
    Select Frame                               id=bottom
-   click element                              link=${BudgetName}
-   sleep                                      3
-   click element                              link=Contracts and Purchase Orders
-   sleep                                      4
-   click element                              id=gui_New_Contract/PO_middle
-   sleep                                      4
-   unselect frame
-   select window                              NEW
-   select from list by label                  id=contracttype_dd                    Standard
-   input text                                 id=CommitmentName                     ContractStage19.02
-   select from list by label                  id=statusDropDown                     Issued / Awarded
-   select from list by label                  id=commitmenttype                     Contract
-   click element                              id=gui_Next_middle
-   sleep                                      3
-   maximize browser window
-  # click element                              name=AllAll
-  # click element                              id=gui_Save_middle
-  # sleep                                      5
- #  maximize browser window
-   click element                              id=gui_Save_middle
- #  maximize browser window
-  # click element                              id=gui_Close_middle
-   select window                              MAIN
+   Click Element                              link=${BudgetName}
+   Sleep                                      3
+   Click Element                              link=Contracts and Purchase Orders
+   Sleep                                      4
+   Click Element                              id=gui_New_Contract/PO_middle
+   Sleep                                      4
+   Unselect Frame
+   Select Window                              NEW
+   Select From List By Label                  id=contracttype_dd                    Standard
+   Input Text                                 id=CommitmentName                     ContractStage19.02
+   Select From List By Label                  id=statusDropDown                     Issued / Awarded
+   Select From List By Label                  id=commitmenttype                     Contract
+   Click Element                              id=gui_Next_middle
+   Sleep                                      3
+   Maximize Browser Window
+  # Click Element                              name=AllAll
+  # Click Element                              id=gui_Save_middle
+  # Sleep                                      5
+ #  Maximize Browser Window
+   Click Element                              id=gui_Save_middle
+ #  Maximize Browser Window
+  # Click Element                              id=gui_Close_middle
+   Select Window                              MAIN
    Select Frame                               id=bottom
-   click element                              id=gui_New_Contract/PO_middle
-   sleep                                      3
-   unselect frame
-   select window                              NEW
-   select from list by label                  id=contracttype_dd                    Standard
-   input text                                 id=CommitmentName                     PurchaseOrderStage19.02
-   select from list by label                  id=statusDropDown                     Issued / Awarded
-   select from list by label                  id=commitmenttype                     Purchase Order
-   click element                              id=gui_Next_middle
-   click element                              id=gui_Save_middle
-   select window                              MAIN
+   Click Element                              id=gui_New_Contract/PO_middle
+   Sleep                                      3
+   Unselect Frame
+   Select Window                              NEW
+   Select From List By Label                  id=contracttype_dd                    Standard
+   Input Text                                 id=CommitmentName                     PurchaseOrderStage19.02
+   Select From List By Label                  id=statusDropDown                     Issued / Awarded
+   Select From List By Label                  id=commitmenttype                     Purchase Order
+   Click Element                              id=gui_Next_middle
+   Click Element                              id=gui_Save_middle
+   Select Window                              MAIN
    Select Frame                               id=bottom
-   sleep                                      3
-   select from list by label                  name=NavChange                         Plan - Line Items by Provider
-   sleep                                      3
-   select from list by label                  name=NavChange                         Plan - Contracts/Purchase Orders
-   wait until page contains                   Issued
-   wait until page contains                   Awarded
+   Sleep                                      3
+   Select From List By Label                  name=NavChange                         Plan - Line Items by Provider
+   Sleep                                      3
+   Select From List By Label                  name=NavChange                         Plan - Contracts/Purchase Orders
+   Wait Until Page Contains                   Issued
+   Wait Until Page Contains                   Awarded
 
 Cost Tracking Work Order/Change Order Creation
   # ${Numbers}=                                evaluate                              random.randint(100, 10000)     random
    Select Frame                               id=top
-   click element                              link=Budget
-   sleep                                      3
-   unselect frame
+   Click Element                              link=Budget
+   Sleep                                      3
+   Unselect Frame
    Select Frame                               id=bottom
-   click element                              link=${BudgetName}
-   click element                              link=Work Orders and Change Orders
-   click element                              id=gui_Create_New_Work_Order_middle
-   unselect frame
-   select window                              NEW
-   select frame                               name=popmain
-   sleep                                      4
-   select from list by label                  name=senderID                           Expesite Support
-   input text                                 id=subject                              WorkOrderStage19.02
-   sleep                                      3
-   click element                              id=gui_Save_middle
-   click element                              id=gui_Close_middle
-   select window                              MAIN
+   Click Element                              link=${BudgetName}
+   Click Element                              link=Work Orders and Change Orders
+   Click Element                              id=gui_Create_New_Work_Order_middle
+   Unselect Frame
+   Select Window                              NEW
+   Select Frame                               name=popmain
+   Sleep                                      4
+   Select From List By Label                  name=senderID                           Expesite Support
+   Input Text                                 id=subject                              WorkOrderStage19.02
+   Sleep                                      3
+   Click Element                              id=gui_Save_middle
+   Click Element                              id=gui_Close_middle
+   Select Window                              MAIN
    Select Frame                               id=bottom
-   click element                              id=gui_Create_New_Change_Order_middle
-   unselect frame
-   select window                              NEW
-   select frame                               name=popmain
-   sleep                                      5
-   select from list by label                  name=RecipientID                        Expesite Support
-   input text                                 name=subject                            ChangeOrderStage19.02
-   click element                              id=gui_Continue_middle
-   click element                              id=gui_Close_middle
-   unselect frame
+   Click Element                              id=gui_Create_New_Change_Order_middle
+   Unselect Frame
+   Select Window                              NEW
+   Select Frame                               name=popmain
+   Sleep                                      5
+   Select From List By Label                  name=RecipientID                        Expesite Support
+   Input Text                                 name=subject                            ChangeOrderStage19.02
+   Click Element                              id=gui_Continue_middle
+   Click Element                              id=gui_Close_middle
+   Unselect Frame
+
+##Documents
+#   Select Frame                              id=top
+#   Click Element                             link=Documents
+#   Sleep                                     3
+#   #Unselect Frame
+#   #Select Frame                              id=bottom
+#   #Select Frame                              name=dochead
+#  # Click Element                             id=gui_New_Folder_middle
+#  #Sleep                                     3
+#  # Unselect Frame
+#  # Select Frame                              id=bottom
+#  # Select Frame                              name=content
+#  # Input Text                                name=foldername                          008AutomatedFolder
+#   #Click Element                             id=gui_Save_middle
+#  # Sleep                                     5
+#  # Unselect Frame
+#  # Select Frame                              id=top
+#  # Click Element                             link=Documents
+#   #Sleep                                     10
+#   Unselect Frame
+#   Select Frame                              id=bottom
+#   Select Frame                              name=folders
+#   Select Frame                              name=folderbrowsemain
+#   Wait Until Page Contains                  008AutomatedFolder (1)
+#   Click Element                             link=008AutomatedFolder (1)
+#   Unselect Frame
+#   Select Frame                              id=bottom
+#   Select Frame                              name=dochead
+#   Click Element                             id=gui_Upload_middle
+#   Unselect Frame
+#   Select Frame                              id=bottom
+# #  Click Element                             id=Html5_ChooseFile_Button_Link
+# #  Sleep                                     5
+# #  Choose File                               id=uploadBox_main
+
 
 Documents
    Select Frame                              id=top
+   Sleep                                     3
    Click Element                             link=Documents
    Sleep                                     3
-   #Unselect Frame
-   #Select Frame                              id=bottom
-   #Select Frame                              name=dochead
-  # Click Element                             id=gui_New_Folder_middle
-  #Sleep                                     3
-  # Unselect Frame
-  # Select Frame                              id=bottom
-  # Select Frame                              name=content
-  # Input Text                                name=foldername                          008AutomatedFolder
-   #Click Element                             id=gui_Save_middle
-  # Sleep                                     5
-  # Unselect frame
-  # Select Frame                              id=top
-  # Click Element                             link=Documents
-   #Sleep                                     10
-   Unselect frame
+   Unselect Frame
+   Select Frame                              id=bottom
+   Select Frame                              name=dochead
+   Click Element                             id=gui_New_Folder_middle
+   Sleep                                     3
+   Unselect Frame
+   Select Frame                              id=bottom
+   Select Frame                              name=content
+   Input Text                                name=foldername                          ${FolderName}
+   Click Element                             id=gui_Save_middle
+   Sleep                                     5
+   Unselect Frame
+   Select Frame                              id=top
+   Click Element                             link=Documents
+   Sleep                                     10
+   Unselect Frame
    Select Frame                              id=bottom
    Select Frame                              name=folders
    Select Frame                              name=folderbrowsemain
-   wait until page contains                  008AutomatedFolder (1)
-   click element                             link=008AutomatedFolder (1)
-   Unselect frame
-   Select Frame                              id=bottom
-   Select Frame                              name=dochead
-   Click element                             id=gui_Upload_middle
+   Wait Until Page Contains                  ${FolderName} (0)
+   Click Element                             link=${FolderName} (0)
    Unselect Frame
    Select Frame                              id=bottom
- #  Click Element                             id=Html5_ChooseFile_Button_Link
- #  sleep                                     5
- #  Choose File                               id=uploadBox_main
+   Select Frame                              name=dochead
+   Click Element                             id=gui_Upload_middle
+   Unselect Frame
+   Select Frame                              id=bottom
+   Sleep                                     3
+   Choose File                               id=file1                                      ${ExcelRoute}
+   Choose File                               id=file1                                      ${PDFRoute}
+   Choose File                               id=file1                                      ${ImageRoute}
+   Choose File                               id=file1                                      ${Image2Route}
+   Choose File                               id=file1                                      ${Image3Route}
+   Choose File                               id=file1                                      ${Image4Route}
+   Choose File                               id=file1                                      ${Image5Route}
+   Choose File                               id=file1                                      ${Image6Route}
+   Click Element                             id=gui_Upload_middle
+   Wait Until Page Contains                  Success!
+   Click Element                             id=gui_Do_It_Now_middle
+   Click Element                             id=gui_Cancel_middle
+   Unselect Frame
+   Select Frame                              id=bottom
+   Select Frame                              name=content
+   Wait Until Page Contains                  ${ExcelName}
+   Wait Until Page Contains                  ${PDFName}
+   Wait Until Page Contains                  ${ImageName}
+   Wait Until Page Contains                  ${Image2Name}
+   Wait Until Page Contains                  ${Image3Name}
+   Wait Until Page Contains                  ${Image4Name}
+   Wait Until Page Contains                  ${Image5Name}
+   Wait Until Page Contains                  ${Image6Name}

@@ -62,7 +62,7 @@ Log in Accruent
 Open Url In Chorme
    [Arguments]                 ${Url}
    Open Browser                ${Url}   Chrome
-   maximize browser window
+   Maximize Browser Window
    Wait Until Page Contains    Login
 
 ###########################################################################################################################
@@ -70,13 +70,13 @@ Open Url In Chorme
 Input Test On Accruent
    Input Text                 id=username         ${User}
  # Clear Element Text         id=username
-   sleep                      1
+   Sleep                      1
    Input Text                 name=password       ${Password}
-   sleep                      1
+   Sleep                      1
    Click Button               //input[@id='image1']
-   sleep                      1
+   Sleep                      1
    Wait Until Page Contains   Expesite
-   sleep                      1
+   Sleep                      1
 
 Access to the project
    Select Frame                                id=bottom
@@ -89,24 +89,24 @@ Access to the project
 Cost Tracking Contract/Purchase Order Creation
    ${Numbers}=                                evaluate                              random.randint(100, 10000)     random
    Select Frame                               id=top
-   click element                              link=Budget
-   sleep                                      3
-   unselect frame
+   Click Element                              link=Budget
+   Sleep                                      3
+   Unselect Frame
    Select Frame                               id=bottom
-   click element                              link=${BudgetName}
-   click element                              link=Contracts and Purchase Orders
-   sleep                                      4
-   click element                              id=gui_New_Contract/PO_middle
-   sleep                                      4
-   unselect frame
-   select window                              NEW
-   select from list by label                  id=contracttype_dd                    Standard
-   input text                                 id=CommitmentName                     ContractStage19.02
-   select from list by label                  id=statusDropDown                     Issued / Awarded
-   select from list by label                  id=commitmenttype                     Contract
-   click element                              id=gui_Next_middle
-   sleep                                      3
-   maximize browser window
+   Click Element                              link=${BudgetName}
+   Click Element                              link=Contracts and Purchase Orders
+   Sleep                                      4
+   Click Element                              id=gui_New_Contract/PO_middle
+   Sleep                                      4
+   Unselect Frame
+   Select Window                              NEW
+   Select From List By Label                  id=contracttype_dd                    Standard
+   Input Text                                 id=CommitmentName                     ContractStage19.02
+   Select From List By Label                  id=statusDropDown                     Issued / Awarded
+   Select From List By Label                  id=commitmenttype                     Contract
+   Click Element                              id=gui_Next_middle
+   Sleep                                      3
+   Maximize Browser Window
    Sleep                                      3
    Click Element                              id=T_42029050_1
    Click Element                              id=T_42029051_1
@@ -133,7 +133,7 @@ Cost Tracking Contract/Purchase Order Creation
    Click Element                              id=gui_Save_middle
    Click Element                              id=gui_Close_middle
    Sleep                                      4
-   select window                              MAIN
+   Select Window                              MAIN
    Select Frame                               id=bottom
    Wait Until Page Contains                   ContractStage19.02
    Sleep                                      4
@@ -142,30 +142,30 @@ Cost Tracking Contract/Purchase Order Creation
 
 
    Sleep                                      5
-#  # sleep                                      5
-# #  maximize browser window
-#   click element                              id=gui_Save_middle
-# #  maximize browser window
-#  # click element                              id=gui_Close_middle
-#   select window                              MAIN
+#  # Sleep                                      5
+# #  Maximize Browser Window
+#   Click Element                              id=gui_Save_middle
+# #  Maximize Browser Window
+#  # Click Element                              id=gui_Close_middle
+#   Select Window                              MAIN
 #   Select Frame                               id=bottom
-#   click element                              id=gui_New_Contract/PO_middle
-#   sleep                                      3
-#   unselect frame
-#   select window                              NEW
-#   select from list by label                  id=contracttype_dd                    Standard
-#   input text                                 id=CommitmentName                     PurchaseOrderStage19.02
-#   select from list by label                  id=statusDropDown                     Issued / Awarded
-#   select from list by label                  id=commitmenttype                     Purchase Order
-#   click element                              id=gui_Next_middle
-#   click element                              id=gui_Save_middle
-#   select window                              MAIN
+#   Click Element                              id=gui_New_Contract/PO_middle
+#   Sleep                                      3
+#   Unselect Frame
+#   Select Window                              NEW
+#   Select From List By Label                  id=contracttype_dd                    Standard
+#   Input Text                                 id=CommitmentName                     PurchaseOrderStage19.02
+#   Select From List By Label                  id=statusDropDown                     Issued / Awarded
+#   Select From List By Label                  id=commitmenttype                     Purchase Order
+#   Click Element                              id=gui_Next_middle
+#   Click Element                              id=gui_Save_middle
+#   Select Window                              MAIN
 #   Select Frame                               id=bottom
-#   sleep                                      3
-#   select from list by label                  name=NavChange                         Plan - Line Items by Provider
-#   sleep                                      3
-#   select from list by label                  name=NavChange                         Plan - Contracts/Purchase Orders
-#   wait until page contains                   Issued
-#   wait until page contains                   Awarded
+#   Sleep                                      3
+#   Select From List By Label                  name=NavChange                         Plan - Line Items by Provider
+#   Sleep                                      3
+#   Select From List By Label                  name=NavChange                         Plan - Contracts/Purchase Orders
+#   Wait Until Page Contains                   Issued
+#   Wait Until Page Contains                   Awarded
 #   Click Element                              xpath=/html/body/table[2]/tbody/tr/td[1]/table/tbody/tr[3]/td/table/tbody/tr[1]/td/a/img
 #   Log to Console                              ~**Cost Tracking Contract/Purchase Order Creation Validated Successfully**~
