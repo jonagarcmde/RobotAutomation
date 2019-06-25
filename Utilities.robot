@@ -3,7 +3,6 @@ Library   Selenium2Library
 
 *** Variables ***
 #Documents
-${FolderName}                        ImagesStage19.03-2
 ${ExcelRoute}                        C:\\TestUpload\\SmokeTestExcel.xlsx
 ${PDFRoute}                          C:\\TestUpload\\SmokeTestPDF.pdf
 ${ImageRoute}                        C:\\TestUpload\\SmokeTestImage.jpg

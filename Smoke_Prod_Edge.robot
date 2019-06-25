@@ -30,7 +30,7 @@ ${BudgetType}                         Standard Construction Budget
 ${ExcelRoute}                        C:\\TestUpload\\SmokeTestExcel.xlsx
 ${PDFRoute}                          C:\\TestUpload\\SmokeTestPDF.pdf
 ${ImageRoute}                        C:\\TestUpload\\SmokeTestImage.jpg
-${MPPRoute}                            C:\\TestUpload\\2016.mpp
+${MPPRoute}                          C:\\TestUpload\\2016.mpp
 
 
 ${ExcelName}                         SmokeTestExcel.xlsx
@@ -52,9 +52,9 @@ Log in Accruent
    Input Test On Accruent
    #Reports
    Access to the project
-   MPP File/Documents
-   Cost Tracking Budget Creation
-   Cost Tracking Bid Creation
+   #MPP File/Documents
+   #Cost Tracking Budget Creation
+   #Cost Tracking Bid Creation
    Cost Tracking Contract/Purchase Order Creation
    Cost Tracking Work Order/Change Order Creation
    Cost Tracking Payment App/Invoice Creation
@@ -154,13 +154,13 @@ MPP File/Documents
    ${FolderName}=                            evaluate                                  random.randint(1000, 100000)             random
    Log to Console                            - - - - - > TC_02 - MPP File / Milestones < - - - - -
    Select Frame                              id=top
+   Sleep                                     3
    Click Element                             link=Documents
-   #Sleep                                     3
    Unselect Frame
    Select Frame                              id=bottom
    Sleep                                     2
    Select Frame                              name=dochead
-   Sleep                                       2
+   Sleep                                     2
    Click Element                             id=gui_New_Folder_middle
    Unselect Frame
    Select Frame                              id=bottom
@@ -176,6 +176,7 @@ MPP File/Documents
    Select Frame                              id=bottom
    Select Frame                              name=folders
    Select Frame                              name=folderbrowsemain
+   Sleep                                     10
    Wait Until Page Contains                  ${FolderName} (0)
    Click Element                             link=${FolderName} (0)
    Unselect Frame
@@ -237,15 +238,19 @@ Cost Tracking Budget Creation
    Click Element                              link=Budget
    Unselect Frame
    Select Frame                               id=bottom
+   Sleep                                      5
    Click Element                              id=gui_New_Budget_middle
    Unselect Frame
    Select Frame                               id=bottom
+   Sleep                                      5
    Select From List By Label                  name=Standard                       Standard Construction Budget
    Click Element                              id=gui_Do_It_Now_middle_3
    Unselect Frame
    Select Frame                               id=bottom
+   Sleep                                      3
    Input Text                                 name=budgetname                      ${BudgetName}
    Click Element                              id=gui_Save_middle
+   Sleep                                      6
    Click Element                              link=${BudgetName}
    Log to Console                             Budget Name: ${BudgetName}
    Log to Console                             -> Budget Creation Validated Successfully
@@ -263,6 +268,7 @@ Cost Tracking Bid Creation
 #   Select Frame                               id=bottom
 #   Click Element                              link=16545
    Click Element                              link=Bid Package
+   Sleep                                      3
    Select From List By Label                  name=contracttype                     Standard
    Input Text                                 name=txtname                          ${BidName}
    Input Text                                 name=txtDue                           12/31/2019
@@ -276,6 +282,7 @@ Cost Tracking Bid Creation
    Wait Until Page Does Not Contain            id=searching
    Unselect Frame
    Select Frame                                name=FindBidder
+   Wait Until Page Contains                    Expesite Support
    Click Element                               link=Expesite Support
    Unselect Frame
    Select Frame                                name=NewBiddersList
@@ -295,24 +302,27 @@ Cost Tracking Bid Creation
    Select Window                               MAIN
    Select Frame                                id=bottom
    Wait Until Page Contains                    Selected
-   Click Element                               id=gui_Attachments_middle
-   Unselect Frame
-   Select Window                               NEW
-   Select Frame                                name=MainAttachments
-   Wait Until Page Contains                    There are no reference documents.
-   Click Element                               id=gui_Attach_middle
-   Choose File                                 id=file1                                      ${ExcelRoute}
-   Choose File                                 id=file1                                      ${PDFRoute}
-   Choose File                                 id=file1                                      ${ImageRoute}
-   Click Element                               id=gui_Upload_middle
-   Wait Until Page Contains                    ${ExcelName}
-   Wait Until Page Contains                    ${PDFName}
-   Wait Until Page Contains                    ${ImageName}
-   Unselect Frame
-   Select Window                               MAIN
-   Select Frame                                id=bottom
+#   Click Element                               id=gui_Attachments_middle
+#   Unselect Frame
+#   Select Window                               NEW
+#   Sleep                                       3
+#   Select Frame                                name=MainAttachments
+#   Wait Until Page Contains                    There are no reference documents.
+#   Click Element                               id=gui_Attach_middle
+#   Sleep                                       5
+#   Choose File                                 id=file1                                      ${ExcelRoute}
+#   Choose File                                 id=file1                                      ${PDFRoute}
+#   Choose File                                 id=file1                                      ${ImageRoute}
+#   Click Element                               id=gui_Upload_middle
+#   Wait Until Page Contains                    ${ExcelName}
+#   Wait Until Page Contains                    ${PDFName}
+#   Wait Until Page Contains                    ${ImageName}
+#   Unselect Frame
+#   Select Window                               MAIN
+#   Select Frame                                id=bottom
    Click Element                               id=gui_Send_middle
    Wait Until Page Contains                    Sealed
+   Sleep                                       3
    Click Element                               xpath=/html/body/table[2]/tbody/tr/td[1]/table/tbody/tr[3]/td/table/tbody/tr[1]/td/a
    Select From List By Label                   name=NavChange                                 Track - By Contract / PO
 
@@ -326,26 +336,33 @@ Cost Tracking Contract/Purchase Order Creation
    ${PurchaseOrderName}=                       evaluate                                  random.randint(1000, 100000)             random
    ${Numbers}=                                 evaluate                                  random.randint(100, 10000)               random
    ${CValues}=                                 evaluate                                  random.randint(100000, 1000000)          random
-#   Select Frame                               id=top
-#   Click Element                              link=Budget
-#   Sleep                                      3
-#   Unselect Frame
-#   Select Frame                               id=bottom
-#   Click Element                              link=${BudgetName}
-#   Click Element                              link=Contracts and Purchase Orders
+   Select Frame                               id=top
+   Click Element                              link=Budget
+   Sleep                                      3
+   Unselect Frame
+   Select Frame                               id=bottom
+   Wait Until Page Contains                   EdgeTestingAu
+   Click Element                              link=EdgeTestingAu
+   Wait Until Page Contains                   Contracts and Purchase Orders
+   Click Element                              link=Contracts and Purchase Orders
+   Sleep                                      3
    Click Element                              id=gui_New_Contract/PO_middle
    Unselect Frame
    Select Window                              NEW
+   Sleep                                      3
    Select From List By Label                  id=contracttype_dd                    Standard
    Input Text                                 id=CommitmentName                     ${ContractName}
    Select From List By Label                  id=statusDropDown                     Issued / Awarded
    Select From List By Label                  id=commitmenttype                     Contract
    Click Element                              id=gui_Next_middle
    Maximize Browser Window
+   Sleep                                      3
    Click Element                              name=AllAll
    Click Element                              id=gui_Save_middle
 #   Sleep                                      3
    #General Requirements
+   Maximize Browser Window
+   Sleep                                      5
    Double Click Element                       //input[starts-with(@id,'laborUnits_')]
    Input Text                                 //input[starts-with(@id,'laborUnits_')]                     2
    Double Click Element                       //input[starts-with(@id,'laborUnitCost_')]

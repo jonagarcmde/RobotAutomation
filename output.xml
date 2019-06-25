@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1 (Python 3.7.0 on win32)" generated="20190607 18:40:12.763" rpa="false">
-<suite id="s1" name="Smoke Prod IE" source="C:\Users\Computer GAP\PycharmProjects\NewTest\Smoke_Prod_IE.robot">
+<robot generator="Robot 3.1 (Python 3.7.0 on win32)" generated="20190619 15:35:05.736" rpa="false">
+<suite id="s1" name="Smoke Prod Chrome" source="C:\Users\Computer GAP\PycharmProjects\NewTest\Smoke_Prod_Chrome.robot">
 <test id="s1-t1" name="Log in Accruent">
 <kw name="Open Url In Chorme">
 <arguments>
@@ -10,23 +10,23 @@
 <doc>Opens a new browser instance to the given ``url``.</doc>
 <arguments>
 <arg>${Url}</arg>
-<arg>Internet Explorer</arg>
+<arg>Chrome</arg>
 </arguments>
-<msg timestamp="20190607 18:40:13.011" level="INFO">Opening browser 'Internet Explorer' to base url 'https://www.expesite.com/login/'.</msg>
-<status status="PASS" starttime="20190607 18:40:13.011" endtime="20190607 18:40:15.168"></status>
+<msg timestamp="20190619 15:35:06.079" level="INFO">Opening browser 'Chrome' to base url 'https://www.expesite.com/login/'.</msg>
+<status status="PASS" starttime="20190619 15:35:06.078" endtime="20190619 15:35:10.274"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20190607 18:40:15.168" endtime="20190607 18:40:15.181"></status>
+<status status="PASS" starttime="20190619 15:35:10.274" endtime="20190619 15:35:11.454"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>Logi</arg>
 </arguments>
-<status status="PASS" starttime="20190607 18:40:15.181" endtime="20190607 18:40:15.300"></status>
+<status status="PASS" starttime="20190619 15:35:11.454" endtime="20190619 15:35:11.469"></status>
 </kw>
-<status status="PASS" starttime="20190607 18:40:13.011" endtime="20190607 18:40:15.300"></status>
+<status status="PASS" starttime="20190619 15:35:06.078" endtime="20190619 15:35:11.469"></status>
 </kw>
 <kw name="Input Test On Accruent">
 <kw name="Input Text" library="Selenium2Library">
@@ -35,8 +35,8 @@
 <arg>id=username</arg>
 <arg>${User}</arg>
 </arguments>
-<msg timestamp="20190607 18:40:15.303" level="INFO">Typing text 'jogarcia' into text field 'id=username'.</msg>
-<status status="PASS" starttime="20190607 18:40:15.302" endtime="20190607 18:40:16.017"></status>
+<msg timestamp="20190619 15:35:11.470" level="INFO">Typing text 'jogarcia' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20190619 15:35:11.470" endtime="20190619 15:35:11.580"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -44,25 +44,376 @@
 <arg>name=password</arg>
 <arg>${Password}</arg>
 </arguments>
-<msg timestamp="20190607 18:40:16.017" level="INFO">Typing text 'j0n474ngarciagap' into text field 'name=password'.</msg>
-<status status="PASS" starttime="20190607 18:40:16.017" endtime="20190607 18:40:16.686"></status>
+<msg timestamp="20190619 15:35:11.580" level="INFO">Typing text 'J0n474ngap.' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20190619 15:35:11.580" endtime="20190619 15:35:11.704"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>CH-EV{index}Login.png</arg>
+</arguments>
+<msg timestamp="20190619 15:35:12.297" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="CH-EV2Login.png"&gt;&lt;img src="CH-EV2Login.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190619 15:35:11.704" endtime="20190619 15:35:12.297"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
 <arg>//input[@id='image1']</arg>
 </arguments>
-<msg timestamp="20190607 18:40:16.686" level="INFO">Clicking button '//input[@id='image1']'.</msg>
-<status status="PASS" starttime="20190607 18:40:16.686" endtime="20190607 18:40:18.732"></status>
+<msg timestamp="20190619 15:35:12.298" level="INFO">Clicking button '//input[@id='image1']'.</msg>
+<status status="PASS" starttime="20190619 15:35:12.297" endtime="20190619 15:35:12.380"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>Expesite</arg>
 </arguments>
-<status status="PASS" starttime="20190607 18:40:18.733" endtime="20190607 18:40:18.799"></status>
+<status status="PASS" starttime="20190619 15:35:12.380" endtime="20190619 15:35:14.155"></status>
 </kw>
-<status status="PASS" starttime="20190607 18:40:15.302" endtime="20190607 18:40:18.799"></status>
+<status status="PASS" starttime="20190619 15:35:11.470" endtime="20190619 15:35:14.155"></status>
+</kw>
+<kw name="Reports">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>- - - - - &gt; TC_01 - Reports &lt; - - - - -</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:35:14.156" endtime="20190619 15:35:14.158"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>id=top</arg>
+</arguments>
+<msg timestamp="20190619 15:35:14.159" level="INFO">Selecting frame 'id=top'.</msg>
+<status status="PASS" starttime="20190619 15:35:14.158" endtime="20190619 15:35:14.192"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>link=My Reports</arg>
+</arguments>
+<msg timestamp="20190619 15:35:14.193" level="INFO">Clicking element 'link=My Reports'.</msg>
+<status status="PASS" starttime="20190619 15:35:14.192" endtime="20190619 15:35:14.380"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=(.//*[normalize-space(text()) and normalize-space(.)='My Offline Surveys'])[1]/following::a[2]</arg>
+</arguments>
+<msg timestamp="20190619 15:35:14.381" level="INFO">Clicking element 'xpath=(.//*[normalize-space(text()) and normalize-space(.)='My Offline Surveys'])[1]/following::a[2]'.</msg>
+<status status="PASS" starttime="20190619 15:35:14.381" endtime="20190619 15:35:15.237"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>My Reports</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:35:15.237" endtime="20190619 15:35:15.254"></status>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190619 15:35:15.254" endtime="20190619 15:35:15.261"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>id=bottom</arg>
+</arguments>
+<msg timestamp="20190619 15:35:15.262" level="INFO">Selecting frame 'id=bottom'.</msg>
+<status status="PASS" starttime="20190619 15:35:15.261" endtime="20190619 15:35:15.303"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>link=2 Dawn's Test Report</arg>
+</arguments>
+<msg timestamp="20190619 15:35:15.303" level="INFO">Clicking element 'link=2 Dawn's Test Report'.</msg>
+<status status="PASS" starttime="20190619 15:35:15.303" endtime="20190619 15:35:16.419"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>AlexTestProj</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:35:16.420" endtime="20190619 15:35:16.439"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>CH-EV{index}Milestone_Report.png</arg>
+</arguments>
+<msg timestamp="20190619 15:35:16.756" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="CH-EV2Milestone_Report.png"&gt;&lt;img src="CH-EV2Milestone_Report.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190619 15:35:16.439" endtime="20190619 15:35:16.757"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Export_to_Excel_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:35:16.759" level="INFO">Clicking element 'id=gui_Export_to_Excel_middle'.</msg>
+<status status="PASS" starttime="20190619 15:35:16.757" endtime="20190619 15:35:16.967"></status>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190619 15:35:16.967" endtime="20190619 15:35:16.977"></status>
+</kw>
+<kw name="Select Window" library="Selenium2Library">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>NEW</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:35:16.978" endtime="20190619 15:35:17.003"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Continue_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:35:17.004" level="INFO">Clicking element 'id=gui_Continue_middle'.</msg>
+<status status="PASS" starttime="20190619 15:35:17.003" endtime="20190619 15:35:20.100"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>id=excelupper</arg>
+</arguments>
+<msg timestamp="20190619 15:35:20.101" level="INFO">Selecting frame 'id=excelupper'.</msg>
+<status status="PASS" starttime="20190619 15:35:20.100" endtime="20190619 15:35:20.163"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20190619 15:35:20.163" endtime="20190619 15:35:20.381"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>CH-EV{index}ExportExcel1.png</arg>
+</arguments>
+<msg timestamp="20190619 15:35:20.799" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="CH-EV2ExportExcel1.png"&gt;&lt;img src="CH-EV2ExportExcel1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190619 15:35:20.382" endtime="20190619 15:35:20.799"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190619 15:35:21.801" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20190619 15:35:20.799" endtime="20190619 15:35:21.801"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Close_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:35:21.801" level="INFO">Clicking element 'id=gui_Close_middle'.</msg>
+<status status="PASS" starttime="20190619 15:35:21.801" endtime="20190619 15:35:21.982"></status>
+</kw>
+<kw name="Select Window" library="Selenium2Library">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>MAIN</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:35:21.982" endtime="20190619 15:35:22.000"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>id=bottom</arg>
+</arguments>
+<msg timestamp="20190619 15:35:22.001" level="INFO">Selecting frame 'id=bottom'.</msg>
+<status status="PASS" starttime="20190619 15:35:22.000" endtime="20190619 15:35:22.070"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Export_to_Excel_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:35:22.070" level="INFO">Clicking element 'id=gui_Export_to_Excel_middle'.</msg>
+<status status="PASS" starttime="20190619 15:35:22.070" endtime="20190619 15:35:22.246"></status>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190619 15:35:22.246" endtime="20190619 15:35:22.255"></status>
+</kw>
+<kw name="Select Window" library="Selenium2Library">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>NEW</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:35:22.255" endtime="20190619 15:35:22.278"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>name=ExcelExportAsCSV</arg>
+</arguments>
+<msg timestamp="20190619 15:35:22.278" level="INFO">Clicking element 'name=ExcelExportAsCSV'.</msg>
+<status status="PASS" starttime="20190619 15:35:22.278" endtime="20190619 15:35:23.361"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Continue_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:35:23.361" level="INFO">Clicking element 'id=gui_Continue_middle'.</msg>
+<status status="PASS" starttime="20190619 15:35:23.361" endtime="20190619 15:35:24.564"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>name=excelupper</arg>
+</arguments>
+<msg timestamp="20190619 15:35:24.565" level="INFO">Selecting frame 'name=excelupper'.</msg>
+<status status="PASS" starttime="20190619 15:35:24.564" endtime="20190619 15:35:24.627"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20190619 15:35:24.628" endtime="20190619 15:35:24.762"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>The Excel Export of this Milestone Report is Complete.</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:35:24.762" endtime="20190619 15:35:24.779"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>CH-EV{index}ExportExcel2.png</arg>
+</arguments>
+<msg timestamp="20190619 15:35:25.092" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="CH-EV2ExportExcel2.png"&gt;&lt;img src="CH-EV2ExportExcel2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190619 15:35:24.779" endtime="20190619 15:35:25.093"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190619 15:35:26.093" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20190619 15:35:25.093" endtime="20190619 15:35:26.093"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Close_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:35:26.093" level="INFO">Clicking element 'id=gui_Close_middle'.</msg>
+<status status="PASS" starttime="20190619 15:35:26.093" endtime="20190619 15:35:26.225"></status>
+</kw>
+<kw name="Select Window" library="Selenium2Library">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>MAIN</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:35:26.225" endtime="20190619 15:35:27.242"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>id=bottom</arg>
+</arguments>
+<msg timestamp="20190619 15:35:27.242" level="INFO">Selecting frame 'id=bottom'.</msg>
+<status status="PASS" starttime="20190619 15:35:27.242" endtime="20190619 15:35:27.262"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Print_View_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:35:27.262" level="INFO">Clicking element 'id=gui_Print_View_middle'.</msg>
+<status status="PASS" starttime="20190619 15:35:27.262" endtime="20190619 15:35:27.397"></status>
+</kw>
+<kw name="Select Window" library="Selenium2Library">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>NEW</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:35:27.397" endtime="20190619 15:35:27.409"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20190619 15:35:27.410" endtime="20190619 15:35:27.538"></status>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="Selenium2Library">
+<doc>Waits until ``text`` disappears from current page.</doc>
+<arguments>
+<arg>The Print View of this Milestone Report is being generated.</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:35:27.539" endtime="20190619 15:35:28.599"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190619 15:35:30.601" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20190619 15:35:28.599" endtime="20190619 15:35:30.601"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>CH-EV{index}ExportPDF.png</arg>
+</arguments>
+<msg timestamp="20190619 15:35:30.885" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="CH-EV2ExportPDF.png"&gt;&lt;img src="CH-EV2ExportPDF.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190619 15:35:30.601" endtime="20190619 15:35:30.885"></status>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190619 15:35:30.885" endtime="20190619 15:35:30.888"></status>
+</kw>
+<kw name="Select Window" library="Selenium2Library">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>MAIN</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:35:30.888" endtime="20190619 15:35:30.909"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>id=bottom</arg>
+</arguments>
+<msg timestamp="20190619 15:35:30.910" level="INFO">Selecting frame 'id=bottom'.</msg>
+<status status="PASS" starttime="20190619 15:35:30.910" endtime="20190619 15:35:30.944"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Back_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:35:30.944" level="INFO">Clicking element 'id=gui_Back_middle'.</msg>
+<status status="PASS" starttime="20190619 15:35:30.944" endtime="20190619 15:35:31.045"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190619 15:35:32.048" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20190619 15:35:31.046" endtime="20190619 15:35:32.048"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Back_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:35:32.048" level="INFO">Clicking element 'id=gui_Back_middle'.</msg>
+<status status="PASS" starttime="20190619 15:35:32.048" endtime="20190619 15:35:32.867"></status>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190619 15:35:32.867" endtime="20190619 15:35:32.877"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>-&gt; Report Section Validated Successfully</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:35:32.877" endtime="20190619 15:35:32.878"></status>
+</kw>
+<status status="PASS" starttime="20190619 15:35:14.156" endtime="20190619 15:35:32.878"></status>
 </kw>
 <kw name="Access to the project">
 <kw name="Sleep" library="BuiltIn">
@@ -70,206 +421,2095 @@
 <arguments>
 <arg>2</arg>
 </arguments>
-<msg timestamp="20190607 18:40:20.810" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20190607 18:40:18.800" endtime="20190607 18:40:20.810"></status>
+<msg timestamp="20190619 15:35:34.881" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20190619 15:35:32.879" endtime="20190619 15:35:34.881"></status>
 </kw>
 <kw name="Select Frame" library="Selenium2Library">
 <doc>Sets frame identified by ``locator`` as the current frame.</doc>
 <arguments>
 <arg>id=bottom</arg>
 </arguments>
-<msg timestamp="20190607 18:40:20.810" level="INFO">Selecting frame 'id=bottom'.</msg>
-<status status="PASS" starttime="20190607 18:40:20.810" endtime="20190607 18:40:20.916"></status>
+<msg timestamp="20190619 15:35:34.881" level="INFO">Selecting frame 'id=bottom'.</msg>
+<status status="PASS" starttime="20190619 15:35:34.881" endtime="20190619 15:35:34.902"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>id=gui_Projects_with_Activity_middle</arg>
 </arguments>
-<msg timestamp="20190607 18:40:20.916" level="INFO">Clicking element 'id=gui_Projects_with_Activity_middle'.</msg>
-<status status="PASS" starttime="20190607 18:40:20.916" endtime="20190607 18:40:22.502"></status>
+<msg timestamp="20190619 15:35:34.902" level="INFO">Clicking element 'id=gui_Projects_with_Activity_middle'.</msg>
+<status status="PASS" starttime="20190619 15:35:34.902" endtime="20190619 15:35:36.227"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>link=Karen's Test Project</arg>
 </arguments>
-<msg timestamp="20190607 18:40:22.502" level="INFO">Clicking element 'link=Karen's Test Project'.</msg>
-<status status="PASS" starttime="20190607 18:40:22.502" endtime="20190607 18:40:24.395"></status>
+<msg timestamp="20190619 15:35:36.228" level="INFO">Clicking element 'link=Karen's Test Project'.</msg>
+<status status="PASS" starttime="20190619 15:35:36.228" endtime="20190619 15:35:38.340"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>Project Role Homepage</arg>
 </arguments>
-<status status="PASS" starttime="20190607 18:40:24.395" endtime="20190607 18:40:24.627"></status>
+<status status="PASS" starttime="20190619 15:35:38.340" endtime="20190619 15:35:38.360"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>CH-EV{index}AcessProject.png</arg>
+</arguments>
+<msg timestamp="20190619 15:35:38.696" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="CH-EV2AcessProject.png"&gt;&lt;img src="CH-EV2AcessProject.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190619 15:35:38.361" endtime="20190619 15:35:38.696"></status>
 </kw>
 <kw name="Unselect Frame" library="Selenium2Library">
 <doc>Sets the main frame as the current frame.</doc>
-<status status="PASS" starttime="20190607 18:40:24.627" endtime="20190607 18:40:24.642"></status>
+<status status="PASS" starttime="20190619 15:35:38.696" endtime="20190619 15:35:38.698"></status>
 </kw>
-<status status="PASS" starttime="20190607 18:40:18.800" endtime="20190607 18:40:24.642"></status>
+<status status="PASS" starttime="20190619 15:35:32.878" endtime="20190619 15:35:38.698"></status>
 </kw>
-<kw name="Approval/Attach">
+<kw name="MPP File/Documents">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(1000, 100000)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${FolderName}</var>
+</assign>
+<msg timestamp="20190619 15:35:38.699" level="INFO">${FolderName} = 85655</msg>
+<status status="PASS" starttime="20190619 15:35:38.699" endtime="20190619 15:35:38.699"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>- - - - - &gt; TC_02 - MPP File / Milestones &lt; - - - - -</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:35:38.699" endtime="20190619 15:35:38.700"></status>
+</kw>
 <kw name="Select Frame" library="Selenium2Library">
 <doc>Sets frame identified by ``locator`` as the current frame.</doc>
 <arguments>
 <arg>id=top</arg>
 </arguments>
-<msg timestamp="20190607 18:40:24.642" level="INFO">Selecting frame 'id=top'.</msg>
-<status status="PASS" starttime="20190607 18:40:24.642" endtime="20190607 18:40:24.782"></status>
+<msg timestamp="20190619 15:35:38.700" level="INFO">Selecting frame 'id=top'.</msg>
+<status status="PASS" starttime="20190619 15:35:38.700" endtime="20190619 15:35:38.725"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
-<arg>link=Budget</arg>
+<arg>link=Documents</arg>
 </arguments>
-<msg timestamp="20190607 18:40:24.783" level="INFO">Clicking element 'link=Budget'.</msg>
-<status status="PASS" starttime="20190607 18:40:24.782" endtime="20190607 18:40:29.424"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>3</arg>
-</arguments>
-<msg timestamp="20190607 18:40:32.431" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20190607 18:40:29.424" endtime="20190607 18:40:32.431"></status>
+<msg timestamp="20190619 15:35:38.725" level="INFO">Clicking element 'link=Documents'.</msg>
+<status status="PASS" starttime="20190619 15:35:38.725" endtime="20190619 15:35:41.193"></status>
 </kw>
 <kw name="Unselect Frame" library="Selenium2Library">
 <doc>Sets the main frame as the current frame.</doc>
-<status status="PASS" starttime="20190607 18:40:32.431" endtime="20190607 18:40:32.449"></status>
+<status status="PASS" starttime="20190619 15:35:41.194" endtime="20190619 15:35:41.198"></status>
 </kw>
 <kw name="Select Frame" library="Selenium2Library">
 <doc>Sets frame identified by ``locator`` as the current frame.</doc>
 <arguments>
 <arg>id=bottom</arg>
 </arguments>
-<msg timestamp="20190607 18:40:32.449" level="INFO">Selecting frame 'id=bottom'.</msg>
-<status status="PASS" starttime="20190607 18:40:32.449" endtime="20190607 18:40:32.565"></status>
+<msg timestamp="20190619 15:35:41.199" level="INFO">Selecting frame 'id=bottom'.</msg>
+<status status="PASS" starttime="20190619 15:35:41.198" endtime="20190619 15:35:41.234"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>name=dochead</arg>
+</arguments>
+<msg timestamp="20190619 15:35:41.235" level="INFO">Selecting frame 'name=dochead'.</msg>
+<status status="PASS" starttime="20190619 15:35:41.235" endtime="20190619 15:35:41.268"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
-<arg>link=59623</arg>
+<arg>id=gui_New_Folder_middle</arg>
 </arguments>
-<msg timestamp="20190607 18:40:32.565" level="INFO">Clicking element 'link=59623'.</msg>
-<status status="PASS" starttime="20190607 18:40:32.565" endtime="20190607 18:40:34.408"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>link=Work Orders and Change Orders</arg>
-</arguments>
-<msg timestamp="20190607 18:40:34.409" level="INFO">Clicking element 'link=Work Orders and Change Orders'.</msg>
-<status status="PASS" starttime="20190607 18:40:34.409" endtime="20190607 18:40:35.120"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>link=Change Order 1</arg>
-</arguments>
-<msg timestamp="20190607 18:40:35.121" level="INFO">Clicking element 'link=Change Order 1'.</msg>
-<status status="PASS" starttime="20190607 18:40:35.120" endtime="20190607 18:40:35.793"></status>
+<msg timestamp="20190619 15:35:41.269" level="INFO">Clicking element 'id=gui_New_Folder_middle'.</msg>
+<status status="PASS" starttime="20190619 15:35:41.269" endtime="20190619 15:35:41.907"></status>
 </kw>
 <kw name="Unselect Frame" library="Selenium2Library">
 <doc>Sets the main frame as the current frame.</doc>
-<status status="PASS" starttime="20190607 18:40:35.793" endtime="20190607 18:40:35.821"></status>
+<status status="PASS" starttime="20190619 15:35:41.907" endtime="20190619 15:35:41.909"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>id=bottom</arg>
+</arguments>
+<msg timestamp="20190619 15:35:41.909" level="INFO">Selecting frame 'id=bottom'.</msg>
+<status status="PASS" starttime="20190619 15:35:41.909" endtime="20190619 15:35:41.930"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>name=content</arg>
+</arguments>
+<msg timestamp="20190619 15:35:41.931" level="INFO">Selecting frame 'name=content'.</msg>
+<status status="PASS" starttime="20190619 15:35:41.931" endtime="20190619 15:35:41.959"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=foldername</arg>
+<arg>${FolderName}</arg>
+</arguments>
+<msg timestamp="20190619 15:35:41.960" level="INFO">Typing text '85655' into text field 'name=foldername'.</msg>
+<status status="PASS" starttime="20190619 15:35:41.960" endtime="20190619 15:35:42.088"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>CH-EV{index}FolderCreation.png</arg>
+</arguments>
+<msg timestamp="20190619 15:35:42.391" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="CH-EV2FolderCreation.png"&gt;&lt;img src="CH-EV2FolderCreation.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190619 15:35:42.088" endtime="20190619 15:35:42.392"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Save_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:35:42.392" level="INFO">Clicking element 'id=gui_Save_middle'.</msg>
+<status status="PASS" starttime="20190619 15:35:42.392" endtime="20190619 15:35:46.607"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Folder Name: ${FolderName}</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:35:46.607" endtime="20190619 15:35:46.637"></status>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190619 15:35:46.637" endtime="20190619 15:35:46.645"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>id=top</arg>
+</arguments>
+<msg timestamp="20190619 15:35:46.645" level="INFO">Selecting frame 'id=top'.</msg>
+<status status="PASS" starttime="20190619 15:35:46.645" endtime="20190619 15:35:46.686"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>link=Documents</arg>
+</arguments>
+<msg timestamp="20190619 15:35:46.686" level="INFO">Clicking element 'link=Documents'.</msg>
+<status status="PASS" starttime="20190619 15:35:46.686" endtime="20190619 15:35:49.401"></status>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190619 15:35:49.401" endtime="20190619 15:35:49.405"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>id=bottom</arg>
+</arguments>
+<msg timestamp="20190619 15:35:49.405" level="INFO">Selecting frame 'id=bottom'.</msg>
+<status status="PASS" starttime="20190619 15:35:49.405" endtime="20190619 15:35:49.458"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>name=folders</arg>
+</arguments>
+<msg timestamp="20190619 15:35:49.458" level="INFO">Selecting frame 'name=folders'.</msg>
+<status status="PASS" starttime="20190619 15:35:49.458" endtime="20190619 15:35:49.493"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>name=folderbrowsemain</arg>
+</arguments>
+<msg timestamp="20190619 15:35:49.493" level="INFO">Selecting frame 'name=folderbrowsemain'.</msg>
+<status status="PASS" starttime="20190619 15:35:49.493" endtime="20190619 15:35:49.525"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${FolderName} (0)</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:35:49.526" endtime="20190619 15:35:49.551"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>link=${FolderName} (0)</arg>
+</arguments>
+<msg timestamp="20190619 15:35:49.551" level="INFO">Clicking element 'link=85655 (0)'.</msg>
+<status status="PASS" starttime="20190619 15:35:49.551" endtime="20190619 15:35:50.898"></status>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190619 15:35:50.898" endtime="20190619 15:35:50.902"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>id=bottom</arg>
+</arguments>
+<msg timestamp="20190619 15:35:50.903" level="INFO">Selecting frame 'id=bottom'.</msg>
+<status status="PASS" starttime="20190619 15:35:50.903" endtime="20190619 15:35:50.924"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>name=dochead</arg>
+</arguments>
+<msg timestamp="20190619 15:35:50.925" level="INFO">Selecting frame 'name=dochead'.</msg>
+<status status="PASS" starttime="20190619 15:35:50.924" endtime="20190619 15:35:50.959"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Upload_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:35:50.959" level="INFO">Clicking element 'id=gui_Upload_middle'.</msg>
+<status status="PASS" starttime="20190619 15:35:50.959" endtime="20190619 15:35:51.696"></status>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190619 15:35:51.696" endtime="20190619 15:35:51.701"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>id=bottom</arg>
+</arguments>
+<msg timestamp="20190619 15:35:51.702" level="INFO">Selecting frame 'id=bottom'.</msg>
+<status status="PASS" starttime="20190619 15:35:51.701" endtime="20190619 15:35:51.722"></status>
+</kw>
+<kw name="Choose File" library="Selenium2Library">
+<doc>Inputs the ``file_path`` into file input field ``locator``.</doc>
+<arguments>
+<arg>id=file1</arg>
+<arg>${MPPRoute}</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:35:51.723" endtime="20190619 15:35:51.769"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Upload_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:35:51.769" level="INFO">Clicking element 'id=gui_Upload_middle'.</msg>
+<status status="PASS" starttime="20190619 15:35:51.769" endtime="20190619 15:35:51.988"></status>
+</kw>
+<kw name="Handle Alert" library="Selenium2Library">
+<doc>Handles the current alert and returns its message.</doc>
+<arguments>
+<arg>ACCEPT</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:35:51.988" endtime="20190619 15:35:53.009"></status>
 </kw>
 <kw name="Select Window" library="Selenium2Library">
 <doc>Selects browser window matching ``locator``.</doc>
 <arguments>
 <arg>NEW</arg>
 </arguments>
-<status status="PASS" starttime="20190607 18:40:35.821" endtime="20190607 18:40:37.182"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>5</arg>
-</arguments>
-<msg timestamp="20190607 18:40:42.193" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20190607 18:40:37.182" endtime="20190607 18:40:42.193"></status>
-</kw>
-<kw name="Select Frame" library="Selenium2Library">
-<doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<arguments>
-<arg>name=popmain</arg>
-</arguments>
-<msg timestamp="20190607 18:40:42.193" level="INFO">Selecting frame 'name=popmain'.</msg>
-<status status="PASS" starttime="20190607 18:40:42.193" endtime="20190607 18:40:42.308"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>5</arg>
-</arguments>
-<msg timestamp="20190607 18:40:47.310" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20190607 18:40:42.308" endtime="20190607 18:40:47.310"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>id=gui_Approve_middle</arg>
-</arguments>
-<msg timestamp="20190607 18:40:47.310" level="INFO">Clicking element 'id=gui_Approve_middle'.</msg>
-<status status="PASS" starttime="20190607 18:40:47.310" endtime="20190607 18:40:47.682"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>2</arg>
-</arguments>
-<msg timestamp="20190607 18:40:49.684" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20190607 18:40:47.682" endtime="20190607 18:40:49.684"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>id=gui_Send_middle</arg>
-</arguments>
-<msg timestamp="20190607 18:40:49.684" level="INFO">Clicking element 'id=gui_Send_middle'.</msg>
-<status status="PASS" starttime="20190607 18:40:49.684" endtime="20190607 18:40:51.209"></status>
+<status status="PASS" starttime="20190619 15:35:53.009" endtime="20190619 15:35:53.125"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
-<arg>Approved</arg>
+<arg>Enter Update Parameters</arg>
 </arguments>
-<status status="PASS" starttime="20190607 18:40:51.209" endtime="20190607 18:40:51.347"></status>
+<status status="PASS" starttime="20190619 15:35:53.125" endtime="20190619 15:35:54.212"></status>
 </kw>
-<kw name="Unselect Frame" library="Selenium2Library">
-<doc>Sets the main frame as the current frame.</doc>
-<status status="PASS" starttime="20190607 18:40:51.347" endtime="20190607 18:40:51.363"></status>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>name=autocompletesubs</arg>
+</arguments>
+<msg timestamp="20190619 15:35:54.212" level="INFO">Clicking element 'name=autocompletesubs'.</msg>
+<status status="PASS" starttime="20190619 15:35:54.212" endtime="20190619 15:35:54.291"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Update_And_Notify_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:35:54.291" level="INFO">Clicking element 'id=gui_Update_And_Notify_middle'.</msg>
+<status status="PASS" starttime="20190619 15:35:54.291" endtime="20190619 15:35:54.974"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=personcheckbox212215</arg>
+</arguments>
+<msg timestamp="20190619 15:35:54.974" level="INFO">Clicking element 'id=personcheckbox212215'.</msg>
+<status status="PASS" starttime="20190619 15:35:54.974" endtime="20190619 15:35:55.034"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Notify_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:35:55.034" level="INFO">Clicking element 'id=gui_Notify_middle'.</msg>
+<status status="PASS" starttime="20190619 15:35:55.034" endtime="20190619 15:35:55.388"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Close_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:35:55.389" level="INFO">Clicking element 'id=gui_Close_middle'.</msg>
+<status status="PASS" starttime="20190619 15:35:55.388" endtime="20190619 15:35:55.446"></status>
 </kw>
 <kw name="Select Window" library="Selenium2Library">
 <doc>Selects browser window matching ``locator``.</doc>
 <arguments>
 <arg>MAIN</arg>
 </arguments>
-<status status="PASS" starttime="20190607 18:40:51.363" endtime="20190607 18:40:51.610"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>2</arg>
-</arguments>
-<msg timestamp="20190607 18:40:53.610" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20190607 18:40:51.610" endtime="20190607 18:40:53.610"></status>
+<status status="PASS" starttime="20190619 15:35:55.446" endtime="20190619 15:35:56.470"></status>
 </kw>
 <kw name="Select Frame" library="Selenium2Library">
 <doc>Sets frame identified by ``locator`` as the current frame.</doc>
 <arguments>
 <arg>id=bottom</arg>
 </arguments>
-<msg timestamp="20190607 18:40:53.610" level="INFO">Selecting frame 'id=bottom'.</msg>
-<status status="PASS" starttime="20190607 18:40:53.610" endtime="20190607 18:40:53.730"></status>
+<msg timestamp="20190619 15:35:56.471" level="INFO">Selecting frame 'id=bottom'.</msg>
+<status status="PASS" starttime="20190619 15:35:56.471" endtime="20190619 15:35:56.490"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Do_It_Now_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:35:56.490" level="INFO">Clicking element 'id=gui_Do_It_Now_middle'.</msg>
+<status status="PASS" starttime="20190619 15:35:56.490" endtime="20190619 15:35:57.536"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Send_and_Copy_to_History_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:35:57.537" level="INFO">Clicking element 'id=gui_Send_and_Copy_to_History_middle'.</msg>
+<status status="PASS" starttime="20190619 15:35:57.536" endtime="20190619 15:35:58.058"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>Success!</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:35:58.058" endtime="20190619 15:35:58.072"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Continue_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:35:58.073" level="INFO">Clicking element 'id=gui_Continue_middle'.</msg>
+<status status="PASS" starttime="20190619 15:35:58.073" endtime="20190619 15:36:00.641"></status>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190619 15:36:00.641" endtime="20190619 15:36:00.643"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>id=bottom</arg>
+</arguments>
+<msg timestamp="20190619 15:36:00.644" level="INFO">Selecting frame 'id=bottom'.</msg>
+<status status="PASS" starttime="20190619 15:36:00.644" endtime="20190619 15:36:00.667"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>name=content</arg>
+</arguments>
+<msg timestamp="20190619 15:36:00.667" level="INFO">Selecting frame 'name=content'.</msg>
+<status status="PASS" starttime="20190619 15:36:00.667" endtime="20190619 15:36:00.701"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>CH-EV{index}MPPFile.png</arg>
+</arguments>
+<msg timestamp="20190619 15:36:00.991" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="CH-EV2MPPFile.png"&gt;&lt;img src="CH-EV2MPPFile.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190619 15:36:00.701" endtime="20190619 15:36:00.991"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${MPPName}</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:00.991" endtime="20190619 15:36:01.007"></status>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190619 15:36:01.007" endtime="20190619 15:36:01.013"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>id=bottom</arg>
+</arguments>
+<msg timestamp="20190619 15:36:01.014" level="INFO">Selecting frame 'id=bottom'.</msg>
+<status status="PASS" starttime="20190619 15:36:01.014" endtime="20190619 15:36:01.038"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>name=dochead</arg>
+</arguments>
+<msg timestamp="20190619 15:36:01.039" level="INFO">Selecting frame 'name=dochead'.</msg>
+<status status="PASS" starttime="20190619 15:36:01.039" endtime="20190619 15:36:01.070"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Upload_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:36:01.071" level="INFO">Clicking element 'id=gui_Upload_middle'.</msg>
+<status status="PASS" starttime="20190619 15:36:01.070" endtime="20190619 15:36:01.587"></status>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190619 15:36:01.587" endtime="20190619 15:36:01.589"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>id=bottom</arg>
+</arguments>
+<msg timestamp="20190619 15:36:01.589" level="INFO">Selecting frame 'id=bottom'.</msg>
+<status status="PASS" starttime="20190619 15:36:01.589" endtime="20190619 15:36:01.612"></status>
+</kw>
+<kw name="Choose File" library="Selenium2Library">
+<doc>Inputs the ``file_path`` into file input field ``locator``.</doc>
+<arguments>
+<arg>id=file1</arg>
+<arg>${ExcelRoute}</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:01.612" endtime="20190619 15:36:01.651"></status>
+</kw>
+<kw name="Choose File" library="Selenium2Library">
+<doc>Inputs the ``file_path`` into file input field ``locator``.</doc>
+<arguments>
+<arg>id=file1</arg>
+<arg>${PDFRoute}</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:01.652" endtime="20190619 15:36:01.681"></status>
+</kw>
+<kw name="Choose File" library="Selenium2Library">
+<doc>Inputs the ``file_path`` into file input field ``locator``.</doc>
+<arguments>
+<arg>id=file1</arg>
+<arg>${ImageRoute}</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:01.682" endtime="20190619 15:36:01.711"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Upload_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:36:01.712" level="INFO">Clicking element 'id=gui_Upload_middle'.</msg>
+<status status="PASS" starttime="20190619 15:36:01.711" endtime="20190619 15:36:01.810"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>Success!</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:01.810" endtime="20190619 15:36:04.519"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Do_It_Now_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:36:04.519" level="INFO">Clicking element 'id=gui_Do_It_Now_middle'.</msg>
+<status status="PASS" starttime="20190619 15:36:04.519" endtime="20190619 15:36:05.576"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Cancel_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:36:05.577" level="INFO">Clicking element 'id=gui_Cancel_middle'.</msg>
+<status status="PASS" starttime="20190619 15:36:05.577" endtime="20190619 15:36:08.157"></status>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190619 15:36:08.157" endtime="20190619 15:36:08.160"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>id=bottom</arg>
+</arguments>
+<msg timestamp="20190619 15:36:08.160" level="INFO">Selecting frame 'id=bottom'.</msg>
+<status status="PASS" starttime="20190619 15:36:08.160" endtime="20190619 15:36:08.185"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>name=content</arg>
+</arguments>
+<msg timestamp="20190619 15:36:08.185" level="INFO">Selecting frame 'name=content'.</msg>
+<status status="PASS" starttime="20190619 15:36:08.185" endtime="20190619 15:36:08.215"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>CH-EV{index}Images.png</arg>
+</arguments>
+<msg timestamp="20190619 15:36:08.490" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="CH-EV2Images.png"&gt;&lt;img src="CH-EV2Images.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190619 15:36:08.215" endtime="20190619 15:36:08.490"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${ExcelName}</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:08.490" endtime="20190619 15:36:08.503"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${PDFName}</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:08.504" endtime="20190619 15:36:08.517"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${ImageName}</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:08.518" endtime="20190619 15:36:08.535"></status>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190619 15:36:08.535" endtime="20190619 15:36:08.538"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>-&gt; MPP File / Milestones Validated Successfully</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:08.538" endtime="20190619 15:36:08.539"></status>
+</kw>
+<status status="PASS" starttime="20190619 15:35:38.699" endtime="20190619 15:36:08.539"></status>
+</kw>
+<kw name="Cost Tracking Budget Creation">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>- - - - - &gt; TC_03 - Budget Creation &lt; - - - - -</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:08.540" endtime="20190619 15:36:08.540"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(1000, 100000)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${BudgetName}</var>
+</assign>
+<msg timestamp="20190619 15:36:08.541" level="INFO">${BudgetName} = 39827</msg>
+<status status="PASS" starttime="20190619 15:36:08.540" endtime="20190619 15:36:08.541"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>id=top</arg>
+</arguments>
+<msg timestamp="20190619 15:36:08.541" level="INFO">Selecting frame 'id=top'.</msg>
+<status status="PASS" starttime="20190619 15:36:08.541" endtime="20190619 15:36:08.582"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>link=Budget</arg>
+</arguments>
+<msg timestamp="20190619 15:36:08.583" level="INFO">Clicking element 'link=Budget'.</msg>
+<status status="PASS" starttime="20190619 15:36:08.582" endtime="20190619 15:36:13.301"></status>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190619 15:36:13.301" endtime="20190619 15:36:13.303"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>id=bottom</arg>
+</arguments>
+<msg timestamp="20190619 15:36:13.303" level="INFO">Selecting frame 'id=bottom'.</msg>
+<status status="PASS" starttime="20190619 15:36:13.303" endtime="20190619 15:36:13.329"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_New_Budget_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:36:13.329" level="INFO">Clicking element 'id=gui_New_Budget_middle'.</msg>
+<status status="PASS" starttime="20190619 15:36:13.329" endtime="20190619 15:36:13.638"></status>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190619 15:36:13.638" endtime="20190619 15:36:13.640"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>id=bottom</arg>
+</arguments>
+<msg timestamp="20190619 15:36:13.641" level="INFO">Selecting frame 'id=bottom'.</msg>
+<status status="PASS" starttime="20190619 15:36:13.641" endtime="20190619 15:36:13.662"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>name=Standard</arg>
+<arg>Standard Construction Budget</arg>
+</arguments>
+<msg timestamp="20190619 15:36:13.662" level="INFO">Selecting options from selection list 'name=Standard' by label Standard Construction Budget.</msg>
+<status status="PASS" starttime="20190619 15:36:13.662" endtime="20190619 15:36:13.743"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Do_It_Now_middle_3</arg>
+</arguments>
+<msg timestamp="20190619 15:36:13.743" level="INFO">Clicking element 'id=gui_Do_It_Now_middle_3'.</msg>
+<status status="PASS" starttime="20190619 15:36:13.743" endtime="20190619 15:36:14.069"></status>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190619 15:36:14.070" endtime="20190619 15:36:14.072"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>id=bottom</arg>
+</arguments>
+<msg timestamp="20190619 15:36:14.073" level="INFO">Selecting frame 'id=bottom'.</msg>
+<status status="PASS" starttime="20190619 15:36:14.072" endtime="20190619 15:36:14.095"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=budgetname</arg>
+<arg>${BudgetName}</arg>
+</arguments>
+<msg timestamp="20190619 15:36:14.095" level="INFO">Typing text '39827' into text field 'name=budgetname'.</msg>
+<status status="PASS" starttime="20190619 15:36:14.095" endtime="20190619 15:36:14.187"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>CH-EV{index}BudgetCreation.png</arg>
+</arguments>
+<msg timestamp="20190619 15:36:14.495" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="CH-EV2BudgetCreation.png"&gt;&lt;img src="CH-EV2BudgetCreation.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190619 15:36:14.187" endtime="20190619 15:36:14.495"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Save_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:36:14.496" level="INFO">Clicking element 'id=gui_Save_middle'.</msg>
+<status status="PASS" starttime="20190619 15:36:14.495" endtime="20190619 15:36:14.652"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>link=${BudgetName}</arg>
+</arguments>
+<msg timestamp="20190619 15:36:14.653" level="INFO">Clicking element 'link=39827'.</msg>
+<status status="PASS" starttime="20190619 15:36:14.653" endtime="20190619 15:36:21.202"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Budget Name: ${BudgetName}</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:21.202" endtime="20190619 15:36:21.203"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>-&gt; Budget Creation Validated Successfully</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:21.203" endtime="20190619 15:36:21.203"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20190619 15:36:24.204" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20190619 15:36:21.203" endtime="20190619 15:36:24.204"></status>
+</kw>
+<status status="PASS" starttime="20190619 15:36:08.539" endtime="20190619 15:36:24.204"></status>
+</kw>
+<kw name="Cost Tracking Bid Creation">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(100, 10000)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${BidName}</var>
+</assign>
+<msg timestamp="20190619 15:36:24.205" level="INFO">${BidName} = 2920</msg>
+<status status="PASS" starttime="20190619 15:36:24.205" endtime="20190619 15:36:24.205"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>link=Bid Package</arg>
+</arguments>
+<msg timestamp="20190619 15:36:24.206" level="INFO">Clicking element 'link=Bid Package'.</msg>
+<status status="PASS" starttime="20190619 15:36:24.206" endtime="20190619 15:36:24.896"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>name=contracttype</arg>
+<arg>Standard</arg>
+</arguments>
+<msg timestamp="20190619 15:36:24.897" level="INFO">Selecting options from selection list 'name=contracttype' by label Standard.</msg>
+<status status="PASS" starttime="20190619 15:36:24.897" endtime="20190619 15:36:25.067"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=txtname</arg>
+<arg>${BidName}</arg>
+</arguments>
+<msg timestamp="20190619 15:36:25.068" level="INFO">Typing text '2920' into text field 'name=txtname'.</msg>
+<status status="PASS" starttime="20190619 15:36:25.067" endtime="20190619 15:36:25.165"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=txtDue</arg>
+<arg>12/31/2019</arg>
+</arguments>
+<msg timestamp="20190619 15:36:25.166" level="INFO">Typing text '12/31/2019' into text field 'name=txtDue'.</msg>
+<status status="PASS" starttime="20190619 15:36:25.165" endtime="20190619 15:36:25.338"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Add_Bidders_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:36:25.339" level="INFO">Clicking element 'id=gui_Add_Bidders_middle'.</msg>
+<status status="PASS" starttime="20190619 15:36:25.338" endtime="20190619 15:36:25.532"></status>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190619 15:36:25.533" endtime="20190619 15:36:25.562"></status>
+</kw>
+<kw name="Select Window" library="Selenium2Library">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>NEW</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:25.562" endtime="20190619 15:36:25.594"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20190619 15:36:28.596" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20190619 15:36:25.594" endtime="20190619 15:36:28.596"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>name=SearchBidder</arg>
+</arguments>
+<msg timestamp="20190619 15:36:28.596" level="INFO">Selecting frame 'name=SearchBidder'.</msg>
+<status status="PASS" starttime="20190619 15:36:28.596" endtime="20190619 15:36:29.648"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=name</arg>
+<arg>Expesite Support</arg>
+</arguments>
+<msg timestamp="20190619 15:36:29.648" level="INFO">Typing text 'Expesite Support' into text field 'name=name'.</msg>
+<status status="PASS" starttime="20190619 15:36:29.648" endtime="20190619 15:36:29.767"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Search_For_Bidder_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:36:29.767" level="INFO">Clicking element 'id=gui_Search_For_Bidder_middle'.</msg>
+<status status="PASS" starttime="20190619 15:36:29.767" endtime="20190619 15:36:30.146"></status>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="Selenium2Library">
+<doc>Waits until ``text`` disappears from current page.</doc>
+<arguments>
+<arg>id=searching</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:30.146" endtime="20190619 15:36:30.176"></status>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190619 15:36:30.176" endtime="20190619 15:36:30.178"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>name=FindBidder</arg>
+</arguments>
+<msg timestamp="20190619 15:36:30.179" level="INFO">Selecting frame 'name=FindBidder'.</msg>
+<status status="PASS" starttime="20190619 15:36:30.178" endtime="20190619 15:36:30.210"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>link=Expesite Support</arg>
+</arguments>
+<msg timestamp="20190619 15:36:30.210" level="INFO">Clicking element 'link=Expesite Support'.</msg>
+<status status="PASS" starttime="20190619 15:36:30.210" endtime="20190619 15:36:30.318"></status>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190619 15:36:30.318" endtime="20190619 15:36:30.320"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>name=NewBiddersList</arg>
+</arguments>
+<msg timestamp="20190619 15:36:30.321" level="INFO">Selecting frame 'name=NewBiddersList'.</msg>
+<status status="PASS" starttime="20190619 15:36:30.320" endtime="20190619 15:36:30.364"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Add_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:36:30.364" level="INFO">Clicking element 'id=gui_Add_middle'.</msg>
+<status status="PASS" starttime="20190619 15:36:30.364" endtime="20190619 15:36:30.530"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20190619 15:36:33.533" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20190619 15:36:30.531" endtime="20190619 15:36:33.533"></status>
+</kw>
+<kw name="Select Window" library="Selenium2Library">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>MAIN</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:33.533" endtime="20190619 15:36:33.538"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>id=bottom</arg>
+</arguments>
+<msg timestamp="20190619 15:36:33.538" level="INFO">Selecting frame 'id=bottom'.</msg>
+<status status="PASS" starttime="20190619 15:36:33.538" endtime="20190619 15:36:33.566"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>Expesite - Expesite Support</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:33.566" endtime="20190619 15:36:33.581"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Add_Line_Items_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:36:33.581" level="INFO">Clicking element 'id=gui_Add_Line_Items_middle'.</msg>
+<status status="PASS" starttime="20190619 15:36:33.581" endtime="20190619 15:36:33.685"></status>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190619 15:36:33.686" endtime="20190619 15:36:33.691"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190619 15:36:35.692" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20190619 15:36:33.691" endtime="20190619 15:36:35.692"></status>
+</kw>
+<kw name="Select Window" library="Selenium2Library">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>NEW</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:35.692" endtime="20190619 15:36:35.700"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>name=AddLineItemstoRFQ</arg>
+</arguments>
+<msg timestamp="20190619 15:36:35.700" level="INFO">Selecting frame 'name=AddLineItemstoRFQ'.</msg>
+<status status="PASS" starttime="20190619 15:36:35.700" endtime="20190619 15:36:36.752"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[starts-with(@id,'T_')]</arg>
+</arguments>
+<msg timestamp="20190619 15:36:36.752" level="INFO">Clicking element '//input[starts-with(@id,'T_')]'.</msg>
+<status status="PASS" starttime="20190619 15:36:36.752" endtime="20190619 15:36:36.862"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Save_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:36:36.862" level="INFO">Clicking element 'id=gui_Save_middle'.</msg>
+<status status="PASS" starttime="20190619 15:36:36.862" endtime="20190619 15:36:37.899"></status>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190619 15:36:37.900" endtime="20190619 15:36:37.925"></status>
+</kw>
+<kw name="Select Window" library="Selenium2Library">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>MAIN</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:37.925" endtime="20190619 15:36:37.943"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>id=bottom</arg>
+</arguments>
+<msg timestamp="20190619 15:36:37.944" level="INFO">Selecting frame 'id=bottom'.</msg>
+<status status="PASS" starttime="20190619 15:36:37.944" endtime="20190619 15:36:37.967"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>Selected</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:37.967" endtime="20190619 15:36:37.983"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Attachments_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:36:37.983" level="INFO">Clicking element 'id=gui_Attachments_middle'.</msg>
+<status status="PASS" starttime="20190619 15:36:37.983" endtime="20190619 15:36:38.151"></status>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190619 15:36:38.151" endtime="20190619 15:36:38.169"></status>
+</kw>
+<kw name="Select Window" library="Selenium2Library">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>NEW</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:38.170" endtime="20190619 15:36:38.193"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>name=MainAttachments</arg>
+</arguments>
+<msg timestamp="20190619 15:36:38.194" level="INFO">Selecting frame 'name=MainAttachments'.</msg>
+<status status="PASS" starttime="20190619 15:36:38.193" endtime="20190619 15:36:39.255"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>There are no reference documents.</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:39.255" endtime="20190619 15:36:39.271"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Attach_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:36:39.272" level="INFO">Clicking element 'id=gui_Attach_middle'.</msg>
+<status status="PASS" starttime="20190619 15:36:39.272" endtime="20190619 15:36:39.778"></status>
+</kw>
+<kw name="Choose File" library="Selenium2Library">
+<doc>Inputs the ``file_path`` into file input field ``locator``.</doc>
+<arguments>
+<arg>id=file1</arg>
+<arg>${ExcelRoute}</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:39.779" endtime="20190619 15:36:39.815"></status>
+</kw>
+<kw name="Choose File" library="Selenium2Library">
+<doc>Inputs the ``file_path`` into file input field ``locator``.</doc>
+<arguments>
+<arg>id=file1</arg>
+<arg>${PDFRoute}</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:39.815" endtime="20190619 15:36:39.843"></status>
+</kw>
+<kw name="Choose File" library="Selenium2Library">
+<doc>Inputs the ``file_path`` into file input field ``locator``.</doc>
+<arguments>
+<arg>id=file1</arg>
+<arg>${ImageRoute}</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:39.843" endtime="20190619 15:36:39.865"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Upload_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:36:39.866" level="INFO">Clicking element 'id=gui_Upload_middle'.</msg>
+<status status="PASS" starttime="20190619 15:36:39.865" endtime="20190619 15:36:39.970"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${ExcelName}</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:39.970" endtime="20190619 15:36:39.993"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${PDFName}</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:39.993" endtime="20190619 15:36:40.010"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${ImageName}</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:40.010" endtime="20190619 15:36:40.025"></status>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190619 15:36:40.026" endtime="20190619 15:36:40.028"></status>
+</kw>
+<kw name="Select Window" library="Selenium2Library">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>MAIN</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:40.028" endtime="20190619 15:36:40.045"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>id=bottom</arg>
+</arguments>
+<msg timestamp="20190619 15:36:40.045" level="INFO">Selecting frame 'id=bottom'.</msg>
+<status status="PASS" starttime="20190619 15:36:40.045" endtime="20190619 15:36:40.126"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>CH-EV{index}BidCreation.png</arg>
+</arguments>
+<msg timestamp="20190619 15:36:40.408" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="CH-EV2BidCreation.png"&gt;&lt;img src="CH-EV2BidCreation.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190619 15:36:40.126" endtime="20190619 15:36:40.408"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Send_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:36:40.409" level="INFO">Clicking element 'id=gui_Send_middle'.</msg>
+<status status="PASS" starttime="20190619 15:36:40.409" endtime="20190619 15:36:41.375"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>Sealed</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:41.375" endtime="20190619 15:36:41.392"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/table[2]/tbody/tr/td[1]/table/tbody/tr[3]/td/table/tbody/tr[1]/td/a</arg>
+</arguments>
+<msg timestamp="20190619 15:36:41.392" level="INFO">Clicking element 'xpath=/html/body/table[2]/tbody/tr/td[1]/table/tbody/tr[3]/td/table/tbody/tr[1]/td/a'.</msg>
+<status status="PASS" starttime="20190619 15:36:41.392" endtime="20190619 15:36:41.854"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>name=NavChange</arg>
+<arg>Track - By Contract / PO</arg>
+</arguments>
+<msg timestamp="20190619 15:36:41.854" level="INFO">Selecting options from selection list 'name=NavChange' by label Track - By Contract / PO.</msg>
+<status status="PASS" starttime="20190619 15:36:41.854" endtime="20190619 15:36:42.504"></status>
+</kw>
+<status status="PASS" starttime="20190619 15:36:24.204" endtime="20190619 15:36:42.504"></status>
+</kw>
+<kw name="Cost Tracking Contract/Purchase Order Creation">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>- - - - - &gt; TC_04 - Contract/Purchase Order Creation &lt; - - - - -</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:42.504" endtime="20190619 15:36:42.505"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(1000, 100000)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${ContractName}</var>
+</assign>
+<msg timestamp="20190619 15:36:42.505" level="INFO">${ContractName} = 32929</msg>
+<status status="PASS" starttime="20190619 15:36:42.505" endtime="20190619 15:36:42.505"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(1000, 100000)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${PurchaseOrderName}</var>
+</assign>
+<msg timestamp="20190619 15:36:42.505" level="INFO">${PurchaseOrderName} = 14018</msg>
+<status status="PASS" starttime="20190619 15:36:42.505" endtime="20190619 15:36:42.505"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(100, 10000)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${Numbers}</var>
+</assign>
+<msg timestamp="20190619 15:36:42.506" level="INFO">${Numbers} = 3973</msg>
+<status status="PASS" starttime="20190619 15:36:42.506" endtime="20190619 15:36:42.506"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(100000, 1000000)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${CValues}</var>
+</assign>
+<msg timestamp="20190619 15:36:42.506" level="INFO">${CValues} = 567719</msg>
+<status status="PASS" starttime="20190619 15:36:42.506" endtime="20190619 15:36:42.506"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_New_Contract/PO_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:36:42.506" level="INFO">Clicking element 'id=gui_New_Contract/PO_middle'.</msg>
+<status status="PASS" starttime="20190619 15:36:42.506" endtime="20190619 15:36:42.649"></status>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190619 15:36:42.649" endtime="20190619 15:36:42.661"></status>
+</kw>
+<kw name="Select Window" library="Selenium2Library">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>NEW</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:42.662" endtime="20190619 15:36:42.678"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>id=contracttype_dd</arg>
+<arg>Standard</arg>
+</arguments>
+<msg timestamp="20190619 15:36:42.678" level="INFO">Selecting options from selection list 'id=contracttype_dd' by label Standard.</msg>
+<status status="PASS" starttime="20190619 15:36:42.678" endtime="20190619 15:36:43.859"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=CommitmentName</arg>
+<arg>${ContractName}</arg>
+</arguments>
+<msg timestamp="20190619 15:36:43.859" level="INFO">Typing text '32929' into text field 'id=CommitmentName'.</msg>
+<status status="PASS" starttime="20190619 15:36:43.859" endtime="20190619 15:36:43.966"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>id=statusDropDown</arg>
+<arg>Issued / Awarded</arg>
+</arguments>
+<msg timestamp="20190619 15:36:43.966" level="INFO">Selecting options from selection list 'id=statusDropDown' by label Issued / Awarded.</msg>
+<status status="PASS" starttime="20190619 15:36:43.966" endtime="20190619 15:36:44.053"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>id=commitmenttype</arg>
+<arg>Contract</arg>
+</arguments>
+<msg timestamp="20190619 15:36:44.053" level="INFO">Selecting options from selection list 'id=commitmenttype' by label Contract.</msg>
+<status status="PASS" starttime="20190619 15:36:44.053" endtime="20190619 15:36:44.106"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>CH-EV{index}ContractCreation.png</arg>
+</arguments>
+<msg timestamp="20190619 15:36:44.333" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="CH-EV2ContractCreation.png"&gt;&lt;img src="CH-EV2ContractCreation.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190619 15:36:44.106" endtime="20190619 15:36:44.333"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Next_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:36:44.333" level="INFO">Clicking element 'id=gui_Next_middle'.</msg>
+<status status="PASS" starttime="20190619 15:36:44.333" endtime="20190619 15:36:45.342"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20190619 15:36:45.342" endtime="20190619 15:36:45.465"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>name=AllAll</arg>
+</arguments>
+<msg timestamp="20190619 15:36:45.466" level="INFO">Clicking element 'name=AllAll'.</msg>
+<status status="PASS" starttime="20190619 15:36:45.465" endtime="20190619 15:36:45.538"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Save_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:36:45.539" level="INFO">Clicking element 'id=gui_Save_middle'.</msg>
+<status status="PASS" starttime="20190619 15:36:45.538" endtime="20190619 15:36:47.241"></status>
+</kw>
+<kw name="Double Click Element" library="Selenium2Library">
+<doc>Double click element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[starts-with(@id,'laborUnits_')]</arg>
+</arguments>
+<msg timestamp="20190619 15:36:47.241" level="INFO">Double clicking element '//input[starts-with(@id,'laborUnits_')]'.</msg>
+<status status="PASS" starttime="20190619 15:36:47.241" endtime="20190619 15:36:47.323"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[starts-with(@id,'laborUnits_')]</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190619 15:36:47.324" level="INFO">Typing text '2' into text field '//input[starts-with(@id,'laborUnits_')]'.</msg>
+<status status="PASS" starttime="20190619 15:36:47.324" endtime="20190619 15:36:47.432"></status>
+</kw>
+<kw name="Double Click Element" library="Selenium2Library">
+<doc>Double click element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[starts-with(@id,'laborUnitCost_')]</arg>
+</arguments>
+<msg timestamp="20190619 15:36:47.433" level="INFO">Double clicking element '//input[starts-with(@id,'laborUnitCost_')]'.</msg>
+<status status="PASS" starttime="20190619 15:36:47.433" endtime="20190619 15:36:47.512"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[starts-with(@id,'laborUnitCost_')]</arg>
+<arg>${CValues}</arg>
+</arguments>
+<msg timestamp="20190619 15:36:47.513" level="INFO">Typing text '567719' into text field '//input[starts-with(@id,'laborUnitCost_')]'.</msg>
+<status status="PASS" starttime="20190619 15:36:47.512" endtime="20190619 15:36:47.699"></status>
+</kw>
+<kw name="Double Click Element" library="Selenium2Library">
+<doc>Double click element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[starts-with(@id,'materialUnits_')]</arg>
+</arguments>
+<msg timestamp="20190619 15:36:47.699" level="INFO">Double clicking element '//input[starts-with(@id,'materialUnits_')]'.</msg>
+<status status="PASS" starttime="20190619 15:36:47.699" endtime="20190619 15:36:47.771"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[starts-with(@id,'materialUnits_')]</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190619 15:36:47.772" level="INFO">Typing text '2' into text field '//input[starts-with(@id,'materialUnits_')]'.</msg>
+<status status="PASS" starttime="20190619 15:36:47.771" endtime="20190619 15:36:47.879"></status>
+</kw>
+<kw name="Double Click Element" library="Selenium2Library">
+<doc>Double click element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[starts-with(@id,'materialUnitCost_')]</arg>
+</arguments>
+<msg timestamp="20190619 15:36:47.880" level="INFO">Double clicking element '//input[starts-with(@id,'materialUnitCost_')]'.</msg>
+<status status="PASS" starttime="20190619 15:36:47.879" endtime="20190619 15:36:47.931"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[starts-with(@id,'materialUnitCost_')]</arg>
+<arg>${CValues}</arg>
+</arguments>
+<msg timestamp="20190619 15:36:47.932" level="INFO">Typing text '567719' into text field '//input[starts-with(@id,'materialUnitCost_')]'.</msg>
+<status status="PASS" starttime="20190619 15:36:47.931" endtime="20190619 15:36:48.133"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Save_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:36:48.135" level="INFO">Clicking element 'id=gui_Save_middle'.</msg>
+<status status="PASS" starttime="20190619 15:36:48.134" endtime="20190619 15:36:51.493"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190619 15:36:52.496" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20190619 15:36:51.494" endtime="20190619 15:36:52.496"></status>
+</kw>
+<kw name="Select Window" library="Selenium2Library">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>MAIN</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:52.496" endtime="20190619 15:36:52.510"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>id=bottom</arg>
+</arguments>
+<msg timestamp="20190619 15:36:52.511" level="INFO">Selecting frame 'id=bottom'.</msg>
+<status status="PASS" starttime="20190619 15:36:52.511" endtime="20190619 15:36:52.549"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_New_Contract/PO_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:36:52.549" level="INFO">Clicking element 'id=gui_New_Contract/PO_middle'.</msg>
+<status status="PASS" starttime="20190619 15:36:52.549" endtime="20190619 15:36:52.676"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20190619 15:36:55.679" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20190619 15:36:52.676" endtime="20190619 15:36:55.679"></status>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190619 15:36:55.679" endtime="20190619 15:36:55.682"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Contract Name: ${ContractName}</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:55.683" endtime="20190619 15:36:55.683"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>-&gt; Contract Creation Validated Successfully</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:55.683" endtime="20190619 15:36:55.684"></status>
+</kw>
+<kw name="Select Window" library="Selenium2Library">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>NEW</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:55.684" endtime="20190619 15:36:55.693"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>id=contracttype_dd</arg>
+<arg>Standard</arg>
+</arguments>
+<msg timestamp="20190619 15:36:55.694" level="INFO">Selecting options from selection list 'id=contracttype_dd' by label Standard.</msg>
+<status status="PASS" starttime="20190619 15:36:55.693" endtime="20190619 15:36:55.769"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=CommitmentName</arg>
+<arg>${PurchaseOrderName}</arg>
+</arguments>
+<msg timestamp="20190619 15:36:55.769" level="INFO">Typing text '14018' into text field 'id=CommitmentName'.</msg>
+<status status="PASS" starttime="20190619 15:36:55.769" endtime="20190619 15:36:55.863"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>id=statusDropDown</arg>
+<arg>Issued / Awarded</arg>
+</arguments>
+<msg timestamp="20190619 15:36:55.864" level="INFO">Selecting options from selection list 'id=statusDropDown' by label Issued / Awarded.</msg>
+<status status="PASS" starttime="20190619 15:36:55.863" endtime="20190619 15:36:55.940"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>id=commitmenttype</arg>
+<arg>Purchase Order</arg>
+</arguments>
+<msg timestamp="20190619 15:36:55.940" level="INFO">Selecting options from selection list 'id=commitmenttype' by label Purchase Order.</msg>
+<status status="PASS" starttime="20190619 15:36:55.940" endtime="20190619 15:36:56.008"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>CH-EV{index}PurchaseCreation.png</arg>
+</arguments>
+<msg timestamp="20190619 15:36:56.256" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="CH-EV2PurchaseCreation.png"&gt;&lt;img src="CH-EV2PurchaseCreation.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190619 15:36:56.009" endtime="20190619 15:36:56.257"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Next_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:36:56.257" level="INFO">Clicking element 'id=gui_Next_middle'.</msg>
+<status status="PASS" starttime="20190619 15:36:56.257" endtime="20190619 15:36:57.371"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>name=AllLabor</arg>
+</arguments>
+<msg timestamp="20190619 15:36:57.371" level="INFO">Clicking element 'name=AllLabor'.</msg>
+<status status="PASS" starttime="20190619 15:36:57.371" endtime="20190619 15:36:57.438"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Save_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:36:57.439" level="INFO">Clicking element 'id=gui_Save_middle'.</msg>
+<status status="PASS" starttime="20190619 15:36:57.438" endtime="20190619 15:36:57.879"></status>
+</kw>
+<kw name="Select Window" library="Selenium2Library">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>MAIN</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:57.879" endtime="20190619 15:36:57.908"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>id=bottom</arg>
+</arguments>
+<msg timestamp="20190619 15:36:57.908" level="INFO">Selecting frame 'id=bottom'.</msg>
+<status status="PASS" starttime="20190619 15:36:57.908" endtime="20190619 15:36:57.935"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=dir2</arg>
+</arguments>
+<msg timestamp="20190619 15:36:57.936" level="INFO">Clicking element 'id=dir2'.</msg>
+<status status="PASS" starttime="20190619 15:36:57.935" endtime="20190619 15:36:58.424"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>CH-EV{index}Contract-PurchaseCreation.png</arg>
+</arguments>
+<msg timestamp="20190619 15:36:58.705" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="CH-EV2Contract-PurchaseCreation.png"&gt;&lt;img src="CH-EV2Contract-PurchaseCreation.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190619 15:36:58.424" endtime="20190619 15:36:58.706"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>Issued</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:58.706" endtime="20190619 15:36:58.722"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>Awarded</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:58.722" endtime="20190619 15:36:58.735"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/table[2]/tbody/tr/td[1]/table/tbody/tr[3]/td/table/tbody/tr[1]/td/a/img</arg>
+</arguments>
+<msg timestamp="20190619 15:36:58.735" level="INFO">Clicking element 'xpath=/html/body/table[2]/tbody/tr/td[1]/table/tbody/tr[3]/td/table/tbody/tr[1]/td/a/img'.</msg>
+<status status="PASS" starttime="20190619 15:36:58.735" endtime="20190619 15:36:59.171"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Purchase Order Name: ${PurchaseOrderName}</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:59.171" endtime="20190619 15:36:59.171"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>-&gt; Purchase Order Creation Validated Successfully</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:59.172" endtime="20190619 15:36:59.172"></status>
+</kw>
+<status status="PASS" starttime="20190619 15:36:42.504" endtime="20190619 15:36:59.172"></status>
+</kw>
+<kw name="Cost Tracking Work Order/Change Order Creation">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>- - - - - &gt; TC_05 - Work Order/Change Order Creation &lt; - - - - -</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:59.173" endtime="20190619 15:36:59.173"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(1000, 100000)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${WorkOrderName}</var>
+</assign>
+<msg timestamp="20190619 15:36:59.174" level="INFO">${WorkOrderName} = 64981</msg>
+<status status="PASS" starttime="20190619 15:36:59.173" endtime="20190619 15:36:59.174"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(1000, 100000)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>${ChangeOrderName}</var>
+</assign>
+<msg timestamp="20190619 15:36:59.174" level="INFO">${ChangeOrderName} = 4334</msg>
+<status status="PASS" starttime="20190619 15:36:59.174" endtime="20190619 15:36:59.174"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Create_New_Work_Order_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:36:59.174" level="INFO">Clicking element 'id=gui_Create_New_Work_Order_middle'.</msg>
+<status status="PASS" starttime="20190619 15:36:59.174" endtime="20190619 15:36:59.322"></status>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190619 15:36:59.322" endtime="20190619 15:36:59.346"></status>
+</kw>
+<kw name="Select Window" library="Selenium2Library">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>NEW</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:36:59.346" endtime="20190619 15:36:59.377"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>name=popmain</arg>
+</arguments>
+<msg timestamp="20190619 15:36:59.377" level="INFO">Selecting frame 'name=popmain'.</msg>
+<status status="PASS" starttime="20190619 15:36:59.377" endtime="20190619 15:37:00.442"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>From:</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:37:00.442" endtime="20190619 15:37:01.088"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>name=senderID</arg>
+<arg>Expesite Support</arg>
+</arguments>
+<msg timestamp="20190619 15:37:01.088" level="INFO">Selecting options from selection list 'name=senderID' by label Expesite Support.</msg>
+<status status="PASS" starttime="20190619 15:37:01.088" endtime="20190619 15:37:01.217"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=subject</arg>
+<arg>${WorkOrderName}</arg>
+</arguments>
+<msg timestamp="20190619 15:37:01.218" level="INFO">Typing text '64981' into text field 'name=subject'.</msg>
+<status status="PASS" starttime="20190619 15:37:01.218" endtime="20190619 15:37:01.345"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>CH-EV{index}WorkOrderCreation.png</arg>
+</arguments>
+<msg timestamp="20190619 15:37:01.606" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="CH-EV2WorkOrderCreation.png"&gt;&lt;img src="CH-EV2WorkOrderCreation.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190619 15:37:01.345" endtime="20190619 15:37:01.606"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Save_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:37:01.607" level="INFO">Clicking element 'id=gui_Save_middle'.</msg>
+<status status="PASS" starttime="20190619 15:37:01.606" endtime="20190619 15:37:02.579"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190619 15:37:04.581" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20190619 15:37:02.580" endtime="20190619 15:37:04.581"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Add/Remove_Line_Items_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:37:04.581" level="INFO">Clicking element 'id=gui_Add/Remove_Line_Items_middle'.</msg>
+<status status="PASS" starttime="20190619 15:37:04.581" endtime="20190619 15:37:05.110"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=lineItemIDs1</arg>
+</arguments>
+<msg timestamp="20190619 15:37:05.110" level="INFO">Clicking element 'id=lineItemIDs1'.</msg>
+<status status="PASS" starttime="20190619 15:37:05.110" endtime="20190619 15:37:05.196"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Save_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:37:05.196" level="INFO">Clicking element 'id=gui_Save_middle'.</msg>
+<status status="PASS" starttime="20190619 15:37:05.196" endtime="20190619 15:37:05.266"></status>
+</kw>
+<kw name="Double Click Element" library="Selenium2Library">
+<doc>Double click element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[starts-with(@id,'laborUnits_')]</arg>
+</arguments>
+<msg timestamp="20190619 15:37:05.266" level="INFO">Double clicking element '//input[starts-with(@id,'laborUnits_')]'.</msg>
+<status status="PASS" starttime="20190619 15:37:05.266" endtime="20190619 15:37:06.041"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[starts-with(@id,'laborUnits_')]</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190619 15:37:06.042" level="INFO">Typing text '2' into text field '//input[starts-with(@id,'laborUnits_')]'.</msg>
+<status status="PASS" starttime="20190619 15:37:06.042" endtime="20190619 15:37:06.144"></status>
+</kw>
+<kw name="Double Click Element" library="Selenium2Library">
+<doc>Double click element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[starts-with(@id,'laborUnitCost_')]</arg>
+</arguments>
+<msg timestamp="20190619 15:37:06.145" level="INFO">Double clicking element '//input[starts-with(@id,'laborUnitCost_')]'.</msg>
+<status status="PASS" starttime="20190619 15:37:06.144" endtime="20190619 15:37:06.198"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[starts-with(@id,'laborUnitCost_')]</arg>
+<arg>1000</arg>
+</arguments>
+<msg timestamp="20190619 15:37:06.199" level="INFO">Typing text '1000' into text field '//input[starts-with(@id,'laborUnitCost_')]'.</msg>
+<status status="PASS" starttime="20190619 15:37:06.198" endtime="20190619 15:37:06.303"></status>
+</kw>
+<kw name="Double Click Element" library="Selenium2Library">
+<doc>Double click element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[starts-with(@id,'materialUnits_')]</arg>
+</arguments>
+<msg timestamp="20190619 15:37:06.304" level="INFO">Double clicking element '//input[starts-with(@id,'materialUnits_')]'.</msg>
+<status status="PASS" starttime="20190619 15:37:06.304" endtime="20190619 15:37:06.363"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[starts-with(@id,'materialUnits_')]</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190619 15:37:06.364" level="INFO">Typing text '2' into text field '//input[starts-with(@id,'materialUnits_')]'.</msg>
+<status status="PASS" starttime="20190619 15:37:06.364" endtime="20190619 15:37:06.447"></status>
+</kw>
+<kw name="Double Click Element" library="Selenium2Library">
+<doc>Double click element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[starts-with(@id,'materialUnitCost_')]</arg>
+</arguments>
+<msg timestamp="20190619 15:37:06.447" level="INFO">Double clicking element '//input[starts-with(@id,'materialUnitCost_')]'.</msg>
+<status status="PASS" starttime="20190619 15:37:06.447" endtime="20190619 15:37:06.497"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[starts-with(@id,'materialUnitCost_')]</arg>
+<arg>1000</arg>
+</arguments>
+<msg timestamp="20190619 15:37:06.497" level="INFO">Typing text '1000' into text field '//input[starts-with(@id,'materialUnitCost_')]'.</msg>
+<status status="PASS" starttime="20190619 15:37:06.497" endtime="20190619 15:37:06.618"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Save_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:37:06.619" level="INFO">Clicking element 'id=gui_Save_middle'.</msg>
+<status status="PASS" starttime="20190619 15:37:06.618" endtime="20190619 15:37:06.706"></status>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190619 15:37:06.706" endtime="20190619 15:37:06.709"></status>
+</kw>
+<kw name="Select Window" library="Selenium2Library">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>MAIN</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:37:06.709" endtime="20190619 15:37:06.725"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>id=bottom</arg>
+</arguments>
+<msg timestamp="20190619 15:37:06.725" level="INFO">Selecting frame 'id=bottom'.</msg>
+<status status="PASS" starttime="20190619 15:37:06.725" endtime="20190619 15:37:06.759"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>link=Work Order 1</arg>
+</arguments>
+<msg timestamp="20190619 15:37:06.760" level="INFO">Clicking element 'link=Work Order 1'.</msg>
+<status status="PASS" starttime="20190619 15:37:06.759" endtime="20190619 15:37:07.001"></status>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190619 15:37:07.001" endtime="20190619 15:37:07.018"></status>
+</kw>
+<kw name="Select Window" library="Selenium2Library">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>NEW</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:37:07.018" endtime="20190619 15:37:07.037"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>name=popmain</arg>
+</arguments>
+<msg timestamp="20190619 15:37:07.038" level="INFO">Selecting frame 'name=popmain'.</msg>
+<status status="PASS" starttime="20190619 15:37:07.038" endtime="20190619 15:37:08.112"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Approve_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:37:08.113" level="INFO">Clicking element 'id=gui_Approve_middle'.</msg>
+<status status="PASS" starttime="20190619 15:37:08.113" endtime="20190619 15:37:08.524"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Send_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:37:08.525" level="INFO">Clicking element 'id=gui_Send_middle'.</msg>
+<status status="PASS" starttime="20190619 15:37:08.524" endtime="20190619 15:37:09.904"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>CH-EV{index}WorkOrderValidation.png</arg>
+</arguments>
+<msg timestamp="20190619 15:37:10.153" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="CH-EV2WorkOrderValidation.png"&gt;&lt;img src="CH-EV2WorkOrderValidation.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190619 15:37:09.904" endtime="20190619 15:37:10.153"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>Approved</arg>
 </arguments>
-<status status="PASS" starttime="20190607 18:40:53.731" endtime="20190607 18:40:53.820"></status>
+<status status="PASS" starttime="20190619 15:37:10.153" endtime="20190619 15:37:10.170"></status>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190619 15:37:10.170" endtime="20190619 15:37:10.173"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Work Order Name: ${WorkOrderName}</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:37:10.173" endtime="20190619 15:37:10.173"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>-&gt; Work Order Creation Validated Successfully</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:37:10.174" endtime="20190619 15:37:10.174"></status>
+</kw>
+<kw name="Select Window" library="Selenium2Library">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>MAIN</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:37:10.174" endtime="20190619 15:37:10.188"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>id=bottom</arg>
+</arguments>
+<msg timestamp="20190619 15:37:10.188" level="INFO">Selecting frame 'id=bottom'.</msg>
+<status status="PASS" starttime="20190619 15:37:10.188" endtime="20190619 15:37:10.232"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Create_New_Change_Order_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:37:10.233" level="INFO">Clicking element 'id=gui_Create_New_Change_Order_middle'.</msg>
+<status status="PASS" starttime="20190619 15:37:10.232" endtime="20190619 15:37:10.440"></status>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190619 15:37:10.440" endtime="20190619 15:37:10.452"></status>
+</kw>
+<kw name="Select Window" library="Selenium2Library">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>NEW</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:37:10.452" endtime="20190619 15:37:10.493"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>name=popmain</arg>
+</arguments>
+<msg timestamp="20190619 15:37:10.494" level="INFO">Selecting frame 'name=popmain'.</msg>
+<status status="PASS" starttime="20190619 15:37:10.494" endtime="20190619 15:37:11.587"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190619 15:37:13.589" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20190619 15:37:11.587" endtime="20190619 15:37:13.589"></status>
+</kw>
+<kw name="Select From List By Index" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>name=CommitmentandBudgetID</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190619 15:37:13.589" level="INFO">Selecting options from selection list 'name=CommitmentandBudgetID' by index 1.</msg>
+<status status="PASS" starttime="20190619 15:37:13.589" endtime="20190619 15:37:14.266"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>From:</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:37:14.266" endtime="20190619 15:37:14.277"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>name=senderID</arg>
+<arg>Expesite Support</arg>
+</arguments>
+<msg timestamp="20190619 15:37:14.278" level="INFO">Selecting options from selection list 'name=senderID' by label Expesite Support.</msg>
+<status status="PASS" starttime="20190619 15:37:14.278" endtime="20190619 15:37:14.392"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=subject</arg>
+<arg>${ChangeOrderName}</arg>
+</arguments>
+<msg timestamp="20190619 15:37:14.393" level="INFO">Typing text '4334' into text field 'name=subject'.</msg>
+<status status="PASS" starttime="20190619 15:37:14.393" endtime="20190619 15:37:14.495"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>CH-EV{index}ChangeOrderCreation.png</arg>
+</arguments>
+<msg timestamp="20190619 15:37:14.752" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="CH-EV2ChangeOrderCreation.png"&gt;&lt;img src="CH-EV2ChangeOrderCreation.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190619 15:37:14.496" endtime="20190619 15:37:14.753"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Continue_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:37:14.753" level="INFO">Clicking element 'id=gui_Continue_middle'.</msg>
+<status status="PASS" starttime="20190619 15:37:14.753" endtime="20190619 15:37:15.631"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Add_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:37:15.633" level="INFO">Clicking element 'id=gui_Add_middle'.</msg>
+<status status="PASS" starttime="20190619 15:37:15.633" endtime="20190619 15:37:16.234"></status>
+</kw>
+<kw name="Double Click Element" library="Selenium2Library">
+<doc>Double click element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[starts-with(@id,'laborUnits_')]</arg>
+</arguments>
+<msg timestamp="20190619 15:37:16.234" level="INFO">Double clicking element '//input[starts-with(@id,'laborUnits_')]'.</msg>
+<status status="PASS" starttime="20190619 15:37:16.234" endtime="20190619 15:37:16.288"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[starts-with(@id,'laborUnits_')]</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190619 15:37:16.289" level="INFO">Typing text '1' into text field '//input[starts-with(@id,'laborUnits_')]'.</msg>
+<status status="PASS" starttime="20190619 15:37:16.289" endtime="20190619 15:37:16.373"></status>
+</kw>
+<kw name="Double Click Element" library="Selenium2Library">
+<doc>Double click element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[starts-with(@id,'laborUnitCost_')]</arg>
+</arguments>
+<msg timestamp="20190619 15:37:16.374" level="INFO">Double clicking element '//input[starts-with(@id,'laborUnitCost_')]'.</msg>
+<status status="PASS" starttime="20190619 15:37:16.373" endtime="20190619 15:37:16.415"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[starts-with(@id,'laborUnitCost_')]</arg>
+<arg>10</arg>
+</arguments>
+<msg timestamp="20190619 15:37:16.416" level="INFO">Typing text '10' into text field '//input[starts-with(@id,'laborUnitCost_')]'.</msg>
+<status status="PASS" starttime="20190619 15:37:16.416" endtime="20190619 15:37:16.551"></status>
+</kw>
+<kw name="Double Click Element" library="Selenium2Library">
+<doc>Double click element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[starts-with(@id,'materialUnits_')]</arg>
+</arguments>
+<msg timestamp="20190619 15:37:16.552" level="INFO">Double clicking element '//input[starts-with(@id,'materialUnits_')]'.</msg>
+<status status="PASS" starttime="20190619 15:37:16.552" endtime="20190619 15:37:16.603"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[starts-with(@id,'materialUnits_')]</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190619 15:37:16.603" level="INFO">Typing text '1' into text field '//input[starts-with(@id,'materialUnits_')]'.</msg>
+<status status="PASS" starttime="20190619 15:37:16.603" endtime="20190619 15:37:16.680"></status>
+</kw>
+<kw name="Double Click Element" library="Selenium2Library">
+<doc>Double click element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[starts-with(@id,'materialUnitCost_')]</arg>
+</arguments>
+<msg timestamp="20190619 15:37:16.681" level="INFO">Double clicking element '//input[starts-with(@id,'materialUnitCost_')]'.</msg>
+<status status="PASS" starttime="20190619 15:37:16.680" endtime="20190619 15:37:16.722"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[starts-with(@id,'materialUnitCost_')]</arg>
+<arg>10</arg>
+</arguments>
+<msg timestamp="20190619 15:37:16.723" level="INFO">Typing text '10' into text field '//input[starts-with(@id,'materialUnitCost_')]'.</msg>
+<status status="PASS" starttime="20190619 15:37:16.723" endtime="20190619 15:37:16.819"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=gui_Save_middle</arg>
+</arguments>
+<msg timestamp="20190619 15:37:16.819" level="INFO">Clicking element 'id=gui_Save_middle'.</msg>
+<status status="PASS" starttime="20190619 15:37:16.819" endtime="20190619 15:37:16.903"></status>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190619 15:37:16.903" endtime="20190619 15:37:16.905"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Change Order Name: ${ChangeOrderName}</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:37:16.905" endtime="20190619 15:37:16.905"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>-&gt; Change Order Creation Validated Successfully</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:37:16.906" endtime="20190619 15:37:16.906"></status>
+</kw>
+<kw name="Select Window" library="Selenium2Library">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>MAIN</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:37:16.906" endtime="20190619 15:37:16.924"></status>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>id=bottom</arg>
+</arguments>
+<msg timestamp="20190619 15:37:16.925" level="INFO">Selecting frame 'id=bottom'.</msg>
+<status status="PASS" starttime="20190619 15:37:16.924" endtime="20190619 15:37:16.958"></status>
 </kw>
 <kw name="Select From List By Label" library="Selenium2Library">
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
@@ -277,130 +2517,154 @@
 <arg>name=NavChange</arg>
 <arg>Track - Invoices/Payment Applications</arg>
 </arguments>
-<msg timestamp="20190607 18:40:53.821" level="INFO">Selecting options from selection list 'name=NavChange' by label Track - Invoices/Payment Applications.</msg>
-<status status="PASS" starttime="20190607 18:40:53.821" endtime="20190607 18:40:54.255"></status>
+<msg timestamp="20190619 15:37:16.958" level="INFO">Selecting options from selection list 'name=NavChange' by label Track - Invoices/Payment Applications.</msg>
+<status status="PASS" starttime="20190619 15:37:16.958" endtime="20190619 15:37:17.432"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2</arg>
 </arguments>
-<msg timestamp="20190607 18:40:56.265" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20190607 18:40:54.255" endtime="20190607 18:40:56.265"></status>
+<msg timestamp="20190619 15:37:19.434" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20190619 15:37:17.432" endtime="20190619 15:37:19.434"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>There are no Payment Requests for this Budget.</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:37:19.434" endtime="20190619 15:37:19.448"></status>
+</kw>
+<status status="PASS" starttime="20190619 15:36:59.173" endtime="20190619 15:37:19.448"></status>
+</kw>
+<kw name="Cost Tracking Payment App/Invoice Creation">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>- - - - - &gt; TC_06 - Payment App/Invoice Creation &lt; - - - - -</arg>
+</arguments>
+<status status="PASS" starttime="20190619 15:37:19.448" endtime="20190619 15:37:19.449"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
-<arg>link=PayApp_01</arg>
+<arg>id=gui_New_Payment_App/Invoice_middle</arg>
 </arguments>
-<msg timestamp="20190607 18:40:56.265" level="INFO">Clicking element 'link=PayApp_01'.</msg>
-<status status="PASS" starttime="20190607 18:40:56.265" endtime="20190607 18:40:56.920"></status>
+<msg timestamp="20190619 15:37:19.449" level="INFO">Clicking element 'id=gui_New_Payment_App/Invoice_middle'.</msg>
+<status status="PASS" starttime="20190619 15:37:19.449" endtime="20190619 15:37:19.605"></status>
 </kw>
 <kw name="Unselect Frame" library="Selenium2Library">
 <doc>Sets the main frame as the current frame.</doc>
-<status status="PASS" starttime="20190607 18:40:56.920" endtime="20190607 18:40:56.952"></status>
+<status status="PASS" starttime="20190619 15:37:19.605" endtime="20190619 15:37:19.621"></status>
 </kw>
 <kw name="Select Window" library="Selenium2Library">
 <doc>Selects browser window matching ``locator``.</doc>
 <arguments>
 <arg>NEW</arg>
 </arguments>
-<status status="PASS" starttime="20190607 18:40:56.952" endtime="20190607 18:40:58.653"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>2</arg>
-</arguments>
-<msg timestamp="20190607 18:41:00.654" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20190607 18:40:58.653" endtime="20190607 18:41:00.654"></status>
+<status status="PASS" starttime="20190619 15:37:19.621" endtime="20190619 15:37:19.651"></status>
 </kw>
 <kw name="Select Frame" library="Selenium2Library">
 <doc>Sets frame identified by ``locator`` as the current frame.</doc>
 <arguments>
 <arg>name=UpdatePayRequest</arg>
 </arguments>
-<msg timestamp="20190607 18:41:00.654" level="INFO">Selecting frame 'name=UpdatePayRequest'.</msg>
-<status status="PASS" starttime="20190607 18:41:00.654" endtime="20190607 18:41:00.772"></status>
+<msg timestamp="20190619 15:37:19.652" level="INFO">Selecting frame 'name=UpdatePayRequest'.</msg>
+<status status="PASS" starttime="20190619 15:37:19.651" endtime="20190619 15:37:20.706"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2</arg>
 </arguments>
-<msg timestamp="20190607 18:41:02.780" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20190607 18:41:00.772" endtime="20190607 18:41:02.780"></status>
+<msg timestamp="20190619 15:37:22.709" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20190619 15:37:20.707" endtime="20190619 15:37:22.709"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=name</arg>
+<arg>PayApp_01</arg>
+</arguments>
+<msg timestamp="20190619 15:37:22.709" level="INFO">Typing text 'PayApp_01' into text field 'id=name'.</msg>
+<status status="PASS" starttime="20190619 15:37:22.709" endtime="20190619 15:37:22.831"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>CH-EV{index}PayAppCreation.png</arg>
+</arguments>
+<msg timestamp="20190619 15:37:23.080" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="CH-EV2PayAppCreation.png"&gt;&lt;img src="CH-EV2PayAppCreation.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190619 15:37:22.831" endtime="20190619 15:37:23.080"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
-<arg>id=gui_Approve_middle</arg>
+<arg>id=gui_Next_middle</arg>
 </arguments>
-<msg timestamp="20190607 18:41:02.780" level="INFO">Clicking element 'id=gui_Approve_middle'.</msg>
-<status status="PASS" starttime="20190607 18:41:02.780" endtime="20190607 18:41:03.450"></status>
+<msg timestamp="20190619 15:37:23.080" level="INFO">Clicking element 'id=gui_Next_middle'.</msg>
+<status status="PASS" starttime="20190619 15:37:23.080" endtime="20190619 15:37:24.083"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2</arg>
 </arguments>
-<msg timestamp="20190607 18:41:05.455" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20190607 18:41:03.450" endtime="20190607 18:41:05.455"></status>
+<msg timestamp="20190619 15:37:26.085" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20190619 15:37:24.083" endtime="20190619 15:37:26.085"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
-<arg>id=gui_Send_middle</arg>
+<arg>id=gui_Save_middle</arg>
 </arguments>
-<msg timestamp="20190607 18:41:05.455" level="INFO">Clicking element 'id=gui_Send_middle'.</msg>
-<status status="PASS" starttime="20190607 18:41:05.455" endtime="20190607 18:41:07.141"></status>
+<msg timestamp="20190619 15:37:26.085" level="INFO">Clicking element 'id=gui_Save_middle'.</msg>
+<status status="PASS" starttime="20190619 15:37:26.085" endtime="20190619 15:37:29.216"></status>
 </kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on current page.</doc>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
 <arguments>
-<arg>Approved</arg>
+<arg>Pay App Name: PayApp_01</arg>
 </arguments>
-<status status="PASS" starttime="20190607 18:41:07.141" endtime="20190607 18:41:07.304"></status>
+<status status="PASS" starttime="20190619 15:37:29.217" endtime="20190619 15:37:29.217"></status>
+</kw>
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20190619 15:37:29.217" endtime="20190619 15:37:29.223"></status>
 </kw>
 <kw name="Select Window" library="Selenium2Library">
 <doc>Selects browser window matching ``locator``.</doc>
 <arguments>
 <arg>MAIN</arg>
 </arguments>
-<status status="PASS" starttime="20190607 18:41:07.305" endtime="20190607 18:41:07.520"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>2</arg>
-</arguments>
-<msg timestamp="20190607 18:41:09.527" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20190607 18:41:07.521" endtime="20190607 18:41:09.527"></status>
+<status status="PASS" starttime="20190619 15:37:29.223" endtime="20190619 15:37:29.247"></status>
 </kw>
 <kw name="Select Frame" library="Selenium2Library">
 <doc>Sets frame identified by ``locator`` as the current frame.</doc>
 <arguments>
 <arg>id=bottom</arg>
 </arguments>
-<msg timestamp="20190607 18:41:09.527" level="INFO">Selecting frame 'id=bottom'.</msg>
-<status status="PASS" starttime="20190607 18:41:09.527" endtime="20190607 18:41:09.684"></status>
+<msg timestamp="20190619 15:37:29.247" level="INFO">Selecting frame 'id=bottom'.</msg>
+<status status="PASS" starttime="20190619 15:37:29.247" endtime="20190619 15:37:29.281"></status>
 </kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on current page.</doc>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
 <arguments>
-<arg>Approved</arg>
+<arg>name=NavChange</arg>
+<arg>Track - Changes</arg>
 </arguments>
-<status status="PASS" starttime="20190607 18:41:09.684" endtime="20190607 18:41:09.774"></status>
+<msg timestamp="20190619 15:37:29.281" level="INFO">Selecting options from selection list 'name=NavChange' by label Track - Changes.</msg>
+<status status="PASS" starttime="20190619 15:37:29.281" endtime="20190619 15:37:29.864"></status>
 </kw>
-<status status="PASS" starttime="20190607 18:40:24.642" endtime="20190607 18:41:09.775"></status>
+<status status="PASS" starttime="20190619 15:37:19.448" endtime="20190619 15:37:29.864"></status>
 </kw>
 <kw name="Close Browser" library="Selenium2Library" type="teardown">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20190607 18:41:09.775" endtime="20190607 18:41:12.900"></status>
+<status status="PASS" starttime="20190619 15:37:29.864" endtime="20190619 15:37:32.584"></status>
 </kw>
-<status status="PASS" starttime="20190607 18:40:13.011" endtime="20190607 18:41:12.900" critical="yes"></status>
+<status status="PASS" starttime="20190619 15:35:06.076" endtime="20190619 15:37:32.584" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20190607 18:40:12.779" endtime="20190607 18:41:12.901"></status>
+<status status="PASS" starttime="20190619 15:35:05.739" endtime="20190619 15:37:32.585"></status>
 </suite>
 <statistics>
 <total>
@@ -410,7 +2674,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="Smoke Prod IE">Smoke Prod IE</stat>
+<stat pass="1" fail="0" id="s1" name="Smoke Prod Chrome">Smoke Prod Chrome</stat>
 </suite>
 </statistics>
 <errors>

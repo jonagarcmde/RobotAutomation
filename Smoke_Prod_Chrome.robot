@@ -6,13 +6,10 @@ Resource  Utilities.robot
 #Login
 ${Url}                         https://www.expesite.com/login/
 ${User}                        jogarcia
-${Password}                    j0n474ngarciagap
+${Password}                    J0n474ngap.
 
 #Access to the project
 ${ProjectName}                 Karen's Test Project
-
-#Validation Pay Apps
-${LastNameBeginsWith}          Hill
 
 
 #Cost Tracking Budget Creation
@@ -25,11 +22,10 @@ ${BudgetType}                         Standard Construction Budget
 #Cost Tracking Payment App/Invoice Creation
 
 #Documents
-
 ${ExcelRoute}                        C:\\TestUpload\\SmokeTestExcel.xlsx
 ${PDFRoute}                          C:\\TestUpload\\SmokeTestPDF.pdf
 ${ImageRoute}                        C:\\TestUpload\\SmokeTestImage.jpg
-${MPPRoute}                            C:\\TestUpload\\2016.mpp
+${MPPRoute}                          C:\\TestUpload\\2016.mpp
 
 
 ${ExcelName}                         SmokeTestExcel.xlsx
@@ -40,7 +36,7 @@ ${MPPName}                           2016.mpp
 
 #MixPanel Credentials
 ${UserMix}                        jonatan.garcia@contractors.accruent.com
-${PasswordMix}                    j0n474n.
+${PasswordMix}                    ########
 
 ###########################################################################################################################
 
@@ -49,18 +45,17 @@ Log in Accruent
    [Teardown]                  Close Browser
    Open Url In Chorme          ${Url}
    Input Test On Accruent
-#   Reports
+   Reports
    Access to the project
-#   MPP File/Documents
-#   Cost Tracking Budget Creation
-#   Cost Tracking Bid Creation
-#   Cost Tracking Contract/Purchase Order Creation
-#   Cost Tracking Work Order/Change Order Creation
-#   Cost Tracking Payment App/Invoice Creation
-   Approval/Attach
-
+   MPP File/Documents
+   Cost Tracking Budget Creation
+   Cost Tracking Bid Creation
+   Cost Tracking Contract/Purchase Order Creation
+   Cost Tracking Work Order/Change Order Creation
+   Cost Tracking Payment App/Invoice Creation
+   #Approval/Attach
    #MixPanel Validation
-   #Conditionals
+
 
 ###########################################################################################################################
 
@@ -75,11 +70,12 @@ Open Url In Chorme
 ###########################################################################################################################
 
 Input Test On Accruent
-   Input Text                 id=username         ${User}
- # Clear Element Text         id=username
-   Input Text                 name=password       ${Password}
-   Click Button               //input[@id='image1']
-   Wait Until Page Contains   Expesite
+   Input Text                   id=username         ${User}
+ # Clear Element Text           id=username
+   Input Text                   name=password       ${Password}
+   Capture Page Screenshot      CH-EV{index}Login.png
+   Click Button                 //input[@id='image1']
+   Wait Until Page Contains     Expesite
 
 
 ###########################################################################################################################
@@ -95,11 +91,14 @@ Reports
    #Select From List By Label                   name=ShowOnly                                Milestone Report
    Click Element                               link=2 Dawn's Test Report
    Wait Until Page Contains                    AlexTestProj
+   Capture Page Screenshot                     CH-EV{index}Milestone_Report.png
    Click Element                               id=gui_Export_to_Excel_middle
    Unselect Frame
    Select Window                               NEW
    Click Element                               id=gui_Continue_middle
    Select Frame                                id=excelupper
+   Maximize Browser Window
+   Capture Page Screenshot                     CH-EV{index}ExportExcel1.png
    Sleep                                       1
    Click Element                               id=gui_Close_middle
    Select Window                               MAIN
@@ -110,14 +109,19 @@ Reports
    Click Element                               name=ExcelExportAsCSV
    Click Element                               id=gui_Continue_middle
    Select Frame                                name=excelupper
+   Maximize Browser Window
    Wait Until Page Contains                    The Excel Export of this Milestone Report is Complete.
+   Capture Page Screenshot                     CH-EV{index}ExportExcel2.png
    Sleep                                       1
    Click Element                               id=gui_Close_middle
    Select Window                               MAIN
    Select Frame                                id=bottom
    Click Element                               id=gui_Print_View_middle
    Select Window                               NEW
+   Maximize Browser Window
    Wait Until Page Does Not Contain            The Print View of this Milestone Report is being generated.
+   Sleep                                       2
+   Capture Page Screenshot                     CH-EV{index}ExportPDF.png
    Unselect Frame
    Select Window                               MAIN
    Select Frame                                id=bottom
@@ -136,6 +140,7 @@ Access to the project
    Click Element                               id=gui_Projects_with_Activity_middle
    Click Element                               link=Karen's Test Project
    Wait Until Page Contains                    Project Role Homepage
+   Capture Page Screenshot                     CH-EV{index}AcessProject.png
    Unselect Frame
 
 ###########################################################################################################################
@@ -154,6 +159,7 @@ MPP File/Documents
    Select Frame                              id=bottom
    Select Frame                              name=content
    Input Text                                name=foldername                          ${FolderName}
+   Capture Page Screenshot                   CH-EV{index}FolderCreation.png
    Click Element                             id=gui_Save_middle
    Log to Console                            Folder Name: ${FolderName}
    Unselect Frame
@@ -171,32 +177,33 @@ MPP File/Documents
    Click Element                             id=gui_Upload_middle
    Unselect Frame
    Select Frame                              id=bottom
-#   Choose File                               id=file1                                      ${MPPRoute}
-#   Click Element                             id=gui_Upload_middle
-#   Handle Alert                              ACCEPT
-#   Select Window                             NEW
-#   Wait Until Page Contains                  Enter Update Parameters
-#   Click Element                             name=autocompletesubs
-#   Click Element                             id=gui_Update_And_Notify_middle
-#   Click Element                             id=personcheckbox212215
-#   Click Element                             id=gui_Notify_middle
-#   Click Element                             id=gui_Close_middle
-#   Select Window                             MAIN
-#   Select Frame                              id=bottom
-#   Click Element                             id=gui_Do_It_Now_middle
-#   Click Element                             id=gui_Send_and_Copy_to_History_middle
-#   Wait Until Page Contains                  Success!
-#   Click Element                             id=gui_Continue_middle
-#   Unselect Frame
-#   Select Frame                              id=bottom
-#   Select Frame                              name=content
-#   Wait Until Page Contains                  ${MPPName}
-#   Unselect Frame
-#   Select Frame                              id=bottom
-#   Select Frame                              name=dochead
-#   Click Element                             id=gui_Upload_middle
-#   Unselect Frame
-#   Select Frame                              id=bottom
+   Choose File                               id=file1                                      ${MPPRoute}
+   Click Element                             id=gui_Upload_middle
+   Handle Alert                              ACCEPT
+   Select Window                             NEW
+   Wait Until Page Contains                  Enter Update Parameters
+   Click Element                             name=autocompletesubs
+   Click Element                             id=gui_Update_And_Notify_middle
+   Click Element                             id=personcheckbox212215
+   Click Element                             id=gui_Notify_middle
+   Click Element                             id=gui_Close_middle
+   Select Window                             MAIN
+   Select Frame                              id=bottom
+   Click Element                             id=gui_Do_It_Now_middle
+   Click Element                             id=gui_Send_and_Copy_to_History_middle
+   Wait Until Page Contains                  Success!
+   Click Element                             id=gui_Continue_middle
+   Unselect Frame
+   Select Frame                              id=bottom
+   Select Frame                              name=content
+   Capture Page Screenshot                   CH-EV{index}MPPFile.png
+   Wait Until Page Contains                  ${MPPName}
+   Unselect Frame
+   Select Frame                              id=bottom
+   Select Frame                              name=dochead
+   Click Element                             id=gui_Upload_middle
+   Unselect Frame
+   Select Frame                              id=bottom
    Choose File                               id=file1                                      ${ExcelRoute}
    Choose File                               id=file1                                      ${PDFRoute}
    Choose File                               id=file1                                      ${ImageRoute}
@@ -207,6 +214,7 @@ MPP File/Documents
    Unselect Frame
    Select Frame                              id=bottom
    Select Frame                              name=content
+   Capture Page Screenshot                   CH-EV{index}Images.png
    Wait Until Page Contains                  ${ExcelName}
    Wait Until Page Contains                  ${PDFName}
    Wait Until Page Contains                  ${ImageName}
@@ -232,6 +240,7 @@ Cost Tracking Budget Creation
    Unselect Frame
    Select Frame                               id=bottom
    Input Text                                 name=budgetname                      ${BudgetName}
+   Capture Page Screenshot                    CH-EV{index}BudgetCreation.png
    Click Element                              id=gui_Save_middle
    Click Element                              link=${BudgetName}
    Log to Console                             Budget Name: ${BudgetName}
@@ -298,6 +307,7 @@ Cost Tracking Bid Creation
    Unselect Frame
    Select Window                               MAIN
    Select Frame                                id=bottom
+   Capture Page Screenshot                     CH-EV{index}BidCreation.png
    Click Element                               id=gui_Send_middle
    Wait Until Page Contains                    Sealed
    Click Element                               xpath=/html/body/table[2]/tbody/tr/td[1]/table/tbody/tr[3]/td/table/tbody/tr[1]/td/a
@@ -327,6 +337,7 @@ Cost Tracking Contract/Purchase Order Creation
    Input Text                                 id=CommitmentName                     ${ContractName}
    Select From List By Label                  id=statusDropDown                     Issued / Awarded
    Select From List By Label                  id=commitmenttype                     Contract
+   Capture Page Screenshot                    CH-EV{index}ContractCreation.png
    Click Element                              id=gui_Next_middle
    Maximize Browser Window
    Click Element                              name=AllAll
@@ -355,6 +366,7 @@ Cost Tracking Contract/Purchase Order Creation
    Input Text                                 id=CommitmentName                     ${PurchaseOrderName}
    Select From List By Label                  id=statusDropDown                     Issued / Awarded
    Select From List By Label                  id=commitmenttype                     Purchase Order
+   Capture Page Screenshot                    CH-EV{index}PurchaseCreation.png
    Click Element                              id=gui_Next_middle
    Click Element                              name=AllLabor
    Click Element                              id=gui_Save_middle
@@ -370,6 +382,7 @@ Cost Tracking Contract/Purchase Order Creation
    Select Window                              MAIN
    Select Frame                               id=bottom
    Click Element                              id=dir2
+   Capture Page Screenshot                    CH-EV{index}Contract-PurchaseCreation.png
    Wait Until Page Contains                   Issued
    Wait Until Page Contains                   Awarded
    Click Element                              xpath=/html/body/table[2]/tbody/tr/td[1]/table/tbody/tr[3]/td/table/tbody/tr[1]/td/a/img
@@ -397,6 +410,7 @@ Cost Tracking Work Order/Change Order Creation
    Wait Until Page Contains                   From:
    Select From List By Label                  name=senderID                           Expesite Support
    Input Text                                 name=subject                            ${WorkOrderName}
+   Capture Page Screenshot                    CH-EV{index}WorkOrderCreation.png
    Click Element                              id=gui_Save_middle
    Sleep                                      2
    Click Element                              id=gui_Add/Remove_Line_Items_middle
@@ -420,6 +434,7 @@ Cost Tracking Work Order/Change Order Creation
    Select Frame                               name=popmain
    Click Element                              id=gui_Approve_middle
    Click Element                              id=gui_Send_middle
+   Capture Page Screenshot                    CH-EV{index}WorkOrderValidation.png
    Wait Until Page Contains                   Approved
    Unselect Frame
    Log to Console                             Work Order Name: ${WorkOrderName}
@@ -435,6 +450,7 @@ Cost Tracking Work Order/Change Order Creation
    Wait Until Page Contains                   From:
    Select From List By Label                  name=senderID                             Expesite Support
    Input Text                                 name=subject                              ${ChangeOrderName}
+   Capture Page Screenshot                    CH-EV{index}ChangeOrderCreation.png
    Click Element                              id=gui_Continue_middle
    Click Element                              id=gui_Add_middle
    Double Click Element                       //input[starts-with(@id,'laborUnits_')]
@@ -495,6 +511,7 @@ Cost Tracking Payment App/Invoice Creation
    Sleep                                      2
   # Select From List By Index                  id=SelectedCommitmentID                   1
    Input Text                                 id=name                                   PayApp_01
+   Capture Page Screenshot                    CH-EV{index}PayAppCreation.png
    Click Element                              id=gui_Next_middle
    Sleep                                      2
 #   Double Click Element                       //input[starts-with(@id,'laborSubTotal_')]
@@ -524,7 +541,7 @@ Approval/Attach
    Sleep                                      3
    Unselect Frame
    Select Frame                               id=bottom
-   Click Element                              link=86888
+   Click Element                              link=98702
    Click Element                              link=Work Orders and Change Orders
    Click Element                              link=Change Order 1
    Unselect Frame
@@ -534,6 +551,7 @@ Approval/Attach
    Click Element                              id=gui_Approve_middle
    Sleep                                      2
    Click Element                              id=gui_Send_middle
+   Capture Page Screenshot                    CH-EV{index}ChangeOrderValidation.png
    Wait Until Page Contains                   Approved
    Click Element                              id=gui_View/Edit_middle
    Select Window                              NEW
@@ -555,6 +573,7 @@ Approval/Attach
    Click Element                              id=gui_Approve_middle
    Sleep                                      2
    Click Element                              id=gui_Send_middle
+   Capture Page Screenshot                    CH-EV{index}PayAppValidation.png
    Wait Until Page Contains                   Approved
 #   Click Element                              id=gui_View/Edit_middle
 #   Select Window                              NEW
@@ -575,6 +594,7 @@ MixPanel Validation
     Input Text                               id=id_password                             ${PasswordMix}
     Click Element                            xpath=//*[@id="bottom"]/input
     Click Element                            xpath=//*[@id="wrapper"]/mp-chrome-header/div/div[1]/div/div[1]/a
+    Capture Page Screenshot                  CH-EV{index}MixPanel.png
     Wait Until Page Contains                 Mobile Key Metrics by Employer
     Sleep                                    5
 

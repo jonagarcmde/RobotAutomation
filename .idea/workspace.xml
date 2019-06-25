@@ -2,87 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="befbbd01-68c0-4e6f-ba80-b400031ff6e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Budget" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Change" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Contract" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Expesite_Automation/Stage/Smoke_Stage_Chrome.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Expesite_Automation/Stage/Smoke_Stage_Edge.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Expesite_Automation/Stage/Smoke_Stage_IE.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Giraffe.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MPP" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Payments.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Purchase" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QA_Tickets.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Report" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Smoke_Prod_Chrome.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Smoke_Prod_Edge.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Smoke_Prod_IE.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Student.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TC_01" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TC_02" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TC_03" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TC_04" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TC_05" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TC_06" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test001.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utilities.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Work" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/employees.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/employees1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-23.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-25.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-26.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-27.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-28.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-29.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-30.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-31.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-33.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-34.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-35.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-36.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-37.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-38.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-39.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-40.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-41.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selenium-screenshot-9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/useful_tools.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Explorer.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Explorer.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QA_AccruentChrome.robot" beforeDir="false" afterPath="$PROJECT_DIR$/QA_AccruentChrome.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QA_AccruentEdge.robot" beforeDir="false" afterPath="$PROJECT_DIR$/QA_AccruentEdge.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QA_AccruentIE.robot" beforeDir="false" afterPath="$PROJECT_DIR$/QA_AccruentIE.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QA_SmokeChromeProd.robot" beforeDir="false" afterPath="$PROJECT_DIR$/QA_SmokeChromeProd.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QAtest.robot" beforeDir="false" afterPath="$PROJECT_DIR$/QAtest.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Smoke_Prod_Chrome.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Smoke_Prod_Chrome.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Smoke_Prod_Edge.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Smoke_Prod_Edge.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Smoke_Prod_IE.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Smoke_Prod_IE.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utilities.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Utilities.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/log.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/output.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/selenium-screenshot-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/selenium-screenshot-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/selenium-screenshot-3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/selenium-screenshot-4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.robot" beforeDir="false" afterPath="$PROJECT_DIR$/test.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1.robot" beforeDir="false" afterPath="$PROJECT_DIR$/test1.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-27.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-28.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-29.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-31.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-33.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-34.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-36.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-37.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-39.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-40.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-41.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/selenium-screenshot-9.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,11 +60,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Smoke_Prod_Chrome.robot">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="127" column="55" selection-start-line="127" selection-start-column="55" selection-end-line="127" selection-end-column="55" />
+            <state relative-caret-position="301">
+              <caret line="553" column="80" lean-forward="true" selection-start-line="553" selection-start-column="47" selection-end-line="553" selection-end-column="83" />
             </state>
           </provider>
         </entry>
@@ -104,35 +72,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Smoke_Prod_IE.robot">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1003">
-              <caret line="59" column="3" selection-start-line="59" selection-start-column="3" selection-end-line="59" selection-end-column="3" />
+            <state relative-caret-position="1210">
+              <caret line="597" column="18" lean-forward="true" selection-start-line="597" selection-start-column="18" selection-end-line="597" selection-end-column="18" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CH-EV1Images.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Smoke_Prod_Edge.robot">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1479">
-              <caret line="87" column="7" selection-start-line="87" selection-start-column="7" selection-end-line="87" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Utilities.robot">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.robot">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4182">
-              <caret line="246" column="10" selection-start-line="245" selection-end-line="302" selection-end-column="53" />
+            <state relative-caret-position="6800">
+              <caret line="400" column="11" selection-start-line="400" selection-start-column="11" selection-end-line="400" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -168,6 +123,10 @@
       <find>CostTrackingNavDD</find>
       <find>name=CommitmentandBudgetID</find>
       <find>name=UpdatePayRequest</find>
+      <find>EV{index}-</find>
+      <find>H-EV{index}ExportExcel1.png</find>
+      <find>H-EV{index</find>
+      <find>CH-EV{index}</find>
     </findStrings>
     <replaceStrings>
       <replace>PS-</replace>
@@ -180,6 +139,7 @@
       <replace>Select Window</replace>
       <replace>Maximize Browser Window</replace>
       <replace>Select Frame</replace>
+      <replace>CH-EV{index}</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -207,16 +167,16 @@
         <option value="$PROJECT_DIR$/Expesite_Automation/Prod/Smoke_Prod_Chrome.robot" />
         <option value="$PROJECT_DIR$/Student.py" />
         <option value="$PROJECT_DIR$/Test001.robot" />
-        <option value="$PROJECT_DIR$/Utilities.robot" />
         <option value="$PROJECT_DIR$/test.robot" />
+        <option value="$PROJECT_DIR$/Utilities.robot" />
         <option value="$PROJECT_DIR$/Smoke_Prod_Edge.robot" />
         <option value="$PROJECT_DIR$/Smoke_Prod_IE.robot" />
         <option value="$PROJECT_DIR$/Smoke_Prod_Chrome.robot" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="365" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="305" />
     <option name="y" value="-8" />
     <option name="width" value="1366" />
     <option name="height" value="515" />
@@ -227,7 +187,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -235,19 +194,15 @@
               <item name="NewTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="NewTest" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="NewTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NewTest" type="462c0819:PsiDirectoryNode" />
-              <item name="Expesite_Automation" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -323,11 +278,12 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Structure" order="0" sideWeight="0.43722942" side_tool="true" visible="true" weight="0.20684524" />
+      <window_info id="Structure" order="0" sideWeight="0.3580402" side_tool="true" visible="true" weight="0.16332982" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.56277055" visible="true" weight="0.20684524" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.6419598" visible="true" weight="0.16332982" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3289689" />
@@ -336,32 +292,13 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3289689" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.24386252" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.1375948" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.29787233" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.3289689" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.robot" />
@@ -379,193 +316,140 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/selenium-screenshot-31.png" />
-    <entry file="file://$PROJECT_DIR$/selenium-screenshot-140.png" />
-    <entry file="file://$PROJECT_DIR$/selenium-screenshot-139.png" />
-    <entry file="file://$PROJECT_DIR$/test11.robot" />
-    <entry file="file://$PROJECT_DIR$/Explorer.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="221" selection-start-line="221" selection-end-line="221" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/selenium-screenshot-53.png" />
+    <entry file="file://$PROJECT_DIR$/Hola.png" />
+    <entry file="file://$PROJECT_DIR$/Login.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ReloadPage.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-561" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Tickets.robot" />
-    <entry file="file://C:/Python37/Lib/random.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12144" />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/EV01-Login-1.png" />
+    <entry file="file://$PROJECT_DIR$/EV2-ExportExcel1.png" />
+    <entry file="file://$PROJECT_DIR$/EV2-ExportExcel2.png" />
+    <entry file="file://$PROJECT_DIR$/EV2-ExportPDF.png" />
+    <entry file="file://$PROJECT_DIR$/EV2-Login.png" />
+    <entry file="file://$PROJECT_DIR$/EV2-Milestone_Report.png" />
+    <entry file="file://$PROJECT_DIR$/EV1-MPPFile.png" />
+    <entry file="file://$PROJECT_DIR$/EV1-Milestone_Report.png" />
+    <entry file="file://$PROJECT_DIR$/EV1-Login.png" />
+    <entry file="file://$PROJECT_DIR$/EV1-Images.png" />
+    <entry file="file://$PROJECT_DIR$/EV1-FolderCreation.png" />
+    <entry file="file://$PROJECT_DIR$/EV1-ExportPDF.png" />
+    <entry file="file://$PROJECT_DIR$/EV1-ExportExcel2.png" />
+    <entry file="file://$PROJECT_DIR$/EV1-ExportExcel1.png" />
+    <entry file="file://$PROJECT_DIR$/EV1-AcessProject.png" />
+    <entry file="file://$PROJECT_DIR$/QA_AccruentEdge.robot">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/QA_AccruentIE.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3757">
-          <caret line="221" selection-start-line="221" selection-end-line="221" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/QA_Tickets.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="61" column="50" selection-start-line="61" selection-start-column="50" selection-end-line="61" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/QAtest.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3390">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Stage_Smoke_Chrome.robot" />
-    <entry file="file://$PROJECT_DIR$/Expesite_Automation/Stage/Smoke_Stage_IE.robot">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/QA_AccruentEdge.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="63" selection-start-line="29" selection-start-column="63" selection-end-line="29" selection-end-column="63" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/CH-EV2AcessProject.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Expesite_Automation/Prod/Smoke_Prod_Edge.robot" />
-    <entry file="file://$PROJECT_DIR$/venv/Smoke_Prod_IE.robot" />
-    <entry file="file://$PROJECT_DIR$/Expesite_Automation/Stage/Smoke_Stage_Edge.robot">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/CH-EV2ExportExcel1.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Expesite_Automation/Stage/Smoke_Stage_Chrome.robot">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/CH-EV2ExportExcel2.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/QA_AccruentChrome.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7939">
-          <caret line="467" column="19" selection-start-line="467" selection-start-column="19" selection-end-line="467" selection-end-column="19" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/CH-EV2ExportPDF.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Smoke_Prod_Chrome.robot" />
-    <entry file="file://$PROJECT_DIR$/Payments.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="78" column="49" selection-start-line="78" selection-start-column="49" selection-end-line="78" selection-end-column="49" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/CH-EV2FolderCreation.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/employees1.txt">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/CH-EV2Images.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/employees.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/CH-EV2Login.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Expesite_Automation/Prod/Smoke_Prod_Chrome.robot" />
-    <entry file="file://$PROJECT_DIR$/test1.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="54" column="4" selection-end-line="170" selection-end-column="123" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/CH-EV2MPPFile.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/useful_tools.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/CH-EV2Milestone_Report.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Student.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/CH-EV2BudgetCreation.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Giraffe.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5916">
-          <caret line="348" selection-start-line="348" selection-end-line="348" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test001.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3315">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/QA_SmokeChromeProd.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="382" column="3" selection-start-line="382" selection-start-column="3" selection-end-line="382" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/selenium-screenshot-26.png" />
-    <entry file="file://$PROJECT_DIR$/selenium-screenshot-25.png" />
-    <entry file="file://$PROJECT_DIR$/selenium-screenshot-24.png" />
-    <entry file="file://$PROJECT_DIR$/selenium-screenshot-4.png" />
-    <entry file="file://$PROJECT_DIR$/selenium-screenshot-1.png" />
-    <entry file="file://$PROJECT_DIR$/selenium-screenshot-5.png" />
-    <entry file="file://$PROJECT_DIR$/selenium-screenshot-14.png" />
-    <entry file="file://$PROJECT_DIR$/selenium-screenshot-20.png" />
-    <entry file="file://$PROJECT_DIR$/selenium-screenshot-22.png" />
-    <entry file="file://$PROJECT_DIR$/selenium-screenshot-23.png" />
-    <entry file="file://$PROJECT_DIR$/selenium-screenshot-16.png" />
-    <entry file="file://$PROJECT_DIR$/selenium-screenshot-9.png" />
-    <entry file="file://$PROJECT_DIR$/selenium-screenshot-2.png" />
-    <entry file="file://$PROJECT_DIR$/Smoke_Prod_Chrome.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="127" column="55" selection-start-line="127" selection-start-column="55" selection-end-line="127" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Smoke_Prod_IE.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="59" column="3" selection-start-line="59" selection-start-column="3" selection-end-line="59" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Smoke_Prod_Edge.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1479">
-          <caret line="87" column="7" selection-start-line="87" selection-start-column="7" selection-end-line="87" selection-end-column="7" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/CH-EV2BidCreation.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Utilities.robot">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+        <state relative-caret-position="68">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.robot">
+    <entry file="file://$PROJECT_DIR$/CH-EV1AcessProject.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CH-EV1BidCreation.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CH-EV1BudgetCreation.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CH-EV1ChangeOrderCreation.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CH-EV1Contract-PurchaseCreation.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CH-EV1ContractCreation.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CH-EV1ExportExcel1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CH-EV1Login.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CH-EV1Milestone_Report.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CH-EV1MPPFile.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CH-EV1PayAppCreation.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CH-EV1PurchaseCreation.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CH-EV1WorkOrderCreation.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CH-EV1WorkOrderValidation.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smoke_Prod_Edge.robot">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4182">
-          <caret line="246" column="10" selection-start-line="245" selection-end-line="302" selection-end-column="53" />
+        <state relative-caret-position="6800">
+          <caret line="400" column="11" selection-start-line="400" selection-start-column="11" selection-end-line="400" selection-end-column="11" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smoke_Prod_Chrome.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="553" column="80" lean-forward="true" selection-start-line="553" selection-start-column="47" selection-end-line="553" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CH-EV2ChangeOrderCreation.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smoke_Prod_IE.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1210">
+          <caret line="597" column="18" lean-forward="true" selection-start-line="597" selection-start-column="18" selection-end-line="597" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CH-EV1Images.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
   </component>
 </project>
